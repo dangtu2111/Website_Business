@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./downloaded_resources/style.css?v=1736492186">
+    <link rel="stylesheet" href="{{asset('Backend/css/style.css?v=1736492186')}}">
     <link href="https://admin.hoidoanhnghiepquan1.com/storage/default/plugins/bootstrap/css/bootstrap.min.css?v=1736492186" rel="stylesheet">
     <link href="https://admin.hoidoanhnghiepquan1.com/storage/default/assets/plugins/perfectscroll/perfect-scrollbar.css?v=1736492186" rel="stylesheet">
     <link href="https://admin.hoidoanhnghiepquan1.com/storage/default/assets/plugins/pace/pace.css?v=1736492186" rel="stylesheet">
