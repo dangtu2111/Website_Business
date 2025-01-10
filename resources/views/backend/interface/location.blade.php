@@ -1,62 +1,136 @@
 <div class="app-content">
-                <div class="content-wrapper">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h1 class="card-title">Vị trí</h1>
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1 class="card-title">Vị trí</h1>
+                        </div>
+                        <div class="card-body">
+                            <div id="page">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-3 text-right"><a href="https://admin.hoidoanhnghiepquan1.com/display/detail" class="btn btn-success bt-add" style="margin-right: 0px;">Tạo vị trí mới</a></div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="el-select" style="width: 100%;"><!---->
+                                                    <div class="el-input el-input--suffix"><!----><input type="text" readonly="readonly" autocomplete="off" placeholder="Chọn ngôn ngữ" class="el-input__inner"><!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span><!----></span><!----><!----></div>
+                                                    <div class="el-select-dropdown el-popper" style="display: none; min-width: 195.85px;">
+                                                        <div class="el-scrollbar" style="">
+                                                            <div class="el-select-dropdown__wrap el-scrollbar__wrap" style="margin-bottom: -17px; margin-right: -17px;">
+                                                                <ul class="el-scrollbar__view el-select-dropdown__list"><!---->
+                                                                    <li class="el-select-dropdown__item selected"><span>VI</span></li>
+                                                                    <li class="el-select-dropdown__item"><span>EN</span></li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="el-scrollbar__bar is-horizontal">
+                                                                <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                                                            </div>
+                                                            <div class="el-scrollbar__bar is-vertical">
+                                                                <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                                                            </div>
+                                                        </div><!---->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class="input-with-select el-input el-input-group el-input-group--append"><!----><input type="text" autocomplete="off" placeholder="Nhập từ khoá" class="el-input__inner"><!----><!---->
+                                                    <div class="el-input-group__append"><button type="button" class="el-button button-search el-button--default"><!----><i class="el-icon-search"></i><span>Tìm kiếm
+                                                            </span></button></div><!---->
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-12"><button type="button" class="el-button el-button--warning"><!----><!----><span>Sắp xếp</span></button></div>
+                                        </div>
+                                        <form action="" id="pageForm" name="pageForm" method="POST" enctype="multipart/form-data">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Trang</th>
+                                                        <th>Tên</th>
+                                                        <th>Link</th>
+                                                        <th>Trạng thái</th>
+                                                        <th width="110px" class="sorting">Sắp xếp</th>
+                                                        <th width="70px"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            trang1[vi]<br> <span style="color: red;">Trang chủ</span></td>
+                                                        <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=a9195cd9-3ac5-428b-824e-9bcf43199198">
+                                                                Slideshow
+                                                            </a></td>
+                                                        <td>{{route('admin.home')}}</td>
+                                                       
+                                                        <td>Bật</td>
+                                                        <td><input type="text" name="sorted[a9195cd9-3ac5-428b-824e-9bcf43199198]" value="1" style="width: 70px;"></td>
+                                                        <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Xoá</span><!----></a></td>
+                                                        <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            trang1[vi]<br> <span style="color: red;">Trang chủ</span></td>
+                                                        <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=a9195cd9-3ac5-428b-824e-9bcf43199198">
+                                                                Slideshow
+                                                            </a></td>
+                                                        <td>{{route('admin.home')}}</td>
+                                                       
+                                                        <td>Bật</td>
+                                                        <td><input type="text" name="sorted[a9195cd9-3ac5-428b-824e-9bcf43199198]" value="1" style="width: 70px;"></td>
+                                                        <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Xoá</span><!----></a></td>
+                                                        <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            trang1[vi]<br> <span style="color: red;">Trang chủ</span></td>
+                                                        <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=a9195cd9-3ac5-428b-824e-9bcf43199198">
+                                                                Slideshow
+                                                            </a></td>
+                                                        <td>{{route('admin.home')}}</td>
+                                                       
+                                                        <td>Bật</td>
+                                                        <td><input type="text" name="sorted[a9195cd9-3ac5-428b-824e-9bcf43199198]" value="1" style="width: 70px;"></td>
+                                                        <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Xoá</span><!----></a></td>
+                                                        <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            trang1[vi]<br> <span style="color: red;">Trang chủ</span></td>
+                                                        <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=a9195cd9-3ac5-428b-824e-9bcf43199198">
+                                                                Slideshow
+                                                            </a></td>
+                                                        <td>{{route('admin.home')}}</td>
+                                                       
+                                                        <td>Bật</td>
+                                                        <td><input type="text" name="sorted[a9195cd9-3ac5-428b-824e-9bcf43199198]" value="1" style="width: 70px;"></td>
+                                                        <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Xoá</span><!----></a></td>
+                                                        <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            trang1[vi]<br> <span style="color: red;">Trang chủ</span></td>
+                                                        <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=a9195cd9-3ac5-428b-824e-9bcf43199198">
+                                                                Slideshow
+                                                            </a></td>
+                                                        <td>{{route('admin.home')}}</td>
+                                                       
+                                                        <td>Bật</td>
+                                                        <td><input type="text" name="sorted[a9195cd9-3ac5-428b-824e-9bcf43199198]" value="1" style="width: 70px;"></td>
+                                                        <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Xoá</span><!----></a></td>
+                                                        <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table> <input type="hidden" name="_token" value="LPulHD1lXmKcYt5ekKdqX0tXQOGR1snYZcpCGhJ6">
+                                        </form>
                                     </div>
-                                    <div class="card-body">
-                                            <div id="page"><div class="row"><div class="col-md-12 col-sm-12 col-xs-3 text-right"><a href="https://admin.hoidoanhnghiepquan1.com/display/detail" class="btn btn-success bt-add" style="margin-right: 0px;">Tạo vị trí mới</a></div> <div class="col-md-12 col-sm-12 col-xs-12"><div class="row"><div class="col-md-3 col-sm-3 col-xs-12"><div class="el-select" style="width: 100%;"><!----><div class="el-input el-input--suffix"><!----><input type="text" readonly="readonly" autocomplete="off" placeholder="Chọn ngôn ngữ" class="el-input__inner"><!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span><!----></span><!----><!----></div><div class="el-select-dropdown el-popper" style="display: none; min-width: 195.85px;"><div class="el-scrollbar" style=""><div class="el-select-dropdown__wrap el-scrollbar__wrap" style="margin-bottom: -17px; margin-right: -17px;"><ul class="el-scrollbar__view el-select-dropdown__list"><!----><li class="el-select-dropdown__item selected"><span>VI</span></li> <li class="el-select-dropdown__item"><span>EN</span></li></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div></div></div><!----></div></div></div> <div class="col-md-6 col-sm-6 col-xs-12"><div class="input-with-select el-input el-input-group el-input-group--append"><!----><input type="text" autocomplete="off" placeholder="Nhập từ khoá" class="el-input__inner"><!----><!----><div class="el-input-group__append"><button type="button" class="el-button button-search el-button--default"><!----><i class="el-icon-search"></i><span>Tìm kiếm
-                            </span></button></div><!----></div></div> <div class="col-md-3 col-sm-3 col-xs-12"><button type="button" class="el-button el-button--warning"><!----><!----><span>Sắp xếp</span></button></div></div> <form action="" id="pageForm" name="pageForm" method="POST" enctype="multipart/form-data"><table class="table table-striped"><thead><tr><th>Vị trí</th> <th>Tên</th> <th>Giao diện</th> <th>Galley</th> <th>Trạng thái</th> <th width="110px" class="sorting">Sắp xếp</th> <th width="70px"></th></tr></thead> <tbody><tr><td>
-                                        vitri1[vi]<br> <span style="color: red;">Trang chủ</span></td> <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=a9195cd9-3ac5-428b-824e-9bcf43199198">
-                                            Slideshow
-                                        </a></td> <td>[1] Slideshow</td> <td>1</td> <td>Bật</td> <td><input type="text" name="sorted[a9195cd9-3ac5-428b-824e-9bcf43199198]" value="1" style="width: 70px;"></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Xoá</span><!----></a></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td></tr> <tr><td>
-                                        vitri2[vi]<br> <span style="color: red;">Trang chủ</span></td> <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=aa09911a-19f3-4062-90a8-64d5f43b39dc">
-                                            Trang chủ - Chào mừng
-                                        </a></td> <td>[2] Giới thiệu</td> <td>3</td> <td>Bật</td> <td><input type="text" name="sorted[aa09911a-19f3-4062-90a8-64d5f43b39dc]" value="2" style="width: 70px;"></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Xoá</span><!----></a></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td></tr> <tr><td>
-                                        vitri3[vi]<br> <span style="color: red;">Trang chủ</span></td> <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=d27fd122-5ab8-4070-8f74-9b2339bf8f5a">
-                                            Trang chủ - Tại sao nên tham gia
-                                        </a></td> <td>[3] Tại sao chọn</td> <td>5</td> <td>Bật</td> <td><input type="text" name="sorted[d27fd122-5ab8-4070-8f74-9b2339bf8f5a]" value="3" style="width: 70px;"></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Xoá</span><!----></a></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td></tr> <tr><td>
-                                        vitri7[vi]<br> <span style="color: red;">Trang chủ</span></td> <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=17da7cdf-5a75-4288-9341-8d0fea6801a3">
-                                            Trang chủ - Đăng ký tham gia
-                                        </a></td> <td>[4] Đăng ký tham gia</td> <td>0</td> <td>Bật</td> <td><input type="text" name="sorted[17da7cdf-5a75-4288-9341-8d0fea6801a3]" value="6" style="width: 70px;"></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Xoá</span><!----></a></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td></tr> <tr><td>
-                                        vitri10[vi]<br> <span style="color: red;">Trang chủ</span></td> <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=e7fb92eb-1de8-4595-8402-d754e8f47ca1">
-                                            Trang chủ - Tin tức Và chia sẻ
-                                        </a></td> <td>[8] Tin tức và chia sẽ</td> <td>0</td> <td>Bật</td> <td><input type="text" name="sorted[e7fb92eb-1de8-4595-8402-d754e8f47ca1]" value="10" style="width: 70px;"></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Xoá</span><!----></a></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td></tr> <tr><td>
-                                        vitri11[vi]<br> <span style="color: red;"></span></td> <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=38a541ea-688b-4a67-9551-8941aa2e85db">
-                                            Trang liên hệ
-                                        </a></td> <td>[11] Liên hệ</td> <td>0</td> <td>Bật</td> <td><input type="text" name="sorted[38a541ea-688b-4a67-9551-8941aa2e85db]" value="11" style="width: 70px;"></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Xoá</span><!----></a></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td></tr> <tr><td>
-                                        vitri11[vi]<br> <span style="color: red;">Trang chủ</span></td> <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=70706850-0904-415e-aaf9-c6251806ecb8">
-                                            Trang chủ - Đối tác
-                                        </a></td> <td>[9] Đối tác</td> <td>10</td> <td>Bật</td> <td><input type="text" name="sorted[70706850-0904-415e-aaf9-c6251806ecb8]" value="11" style="width: 70px;"></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Xoá</span><!----></a></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td></tr> <tr><td>
-                                        vitri11[vi]<br> <span style="color: red;"></span></td> <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=e35473bc-ea4b-44ac-8a5d-f49a7574bb7f">
-                                            Menu chính
-                                        </a></td> <td>[13] Menu Left</td> <td>0</td> <td>Bật</td> <td><input type="text" name="sorted[e35473bc-ea4b-44ac-8a5d-f49a7574bb7f]" value="11" style="width: 70px;"></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Xoá</span><!----></a></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td></tr> <tr><td>
-                                        vitri12[vi]<br> <span style="color: red;"></span></td> <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=606e3dda-5222-42dc-9d62-5e66594db764">
-                                            Trang chủ - Hỗ trợ online
-                                        </a></td> <td>[14] Hỗ trợ</td> <td>0</td> <td>Bật</td> <td><input type="text" name="sorted[606e3dda-5222-42dc-9d62-5e66594db764]" value="12" style="width: 70px;"></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Xoá</span><!----></a></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td></tr> <tr><td>
-                                        vitri13[vi]<br> <span style="color: red;">Trang chủ</span></td> <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=f607ae46-ffd2-43c6-bf5c-14458aed892e">
-                                            Trang chủ - Đăng ký tham gia
-                                        </a></td> <td>[4] Đăng ký tham gia</td> <td>0</td> <td>Bật</td> <td><input type="text" name="sorted[f607ae46-ffd2-43c6-bf5c-14458aed892e]" value="12" style="width: 70px;"></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Xoá</span><!----></a></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td></tr> <tr><td>
-                                        vitri13[vi]<br> <span style="color: red;"></span></td> <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=4cff87a5-f5cc-4167-88ef-c1ca6b7a3ee5">
-                                            Form đăng ký
-                                        </a></td> <td>[4] Đăng ký tham gia</td> <td>0</td> <td>Bật</td> <td><input type="text" name="sorted[4cff87a5-f5cc-4167-88ef-c1ca6b7a3ee5]" value="13" style="width: 70px;"></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Xoá</span><!----></a></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td></tr> <tr><td>
-                                        vitri12[vi]<br> <span style="color: red;"></span></td> <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=5256c0c0-39ff-4496-9c41-6708ca781b15">
-                                            Footer
-                                        </a></td> <td>[10] Footer</td> <td>0</td> <td>Bật</td> <td><input type="text" name="sorted[5256c0c0-39ff-4496-9c41-6708ca781b15]" value="13" style="width: 70px;"></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Xoá</span><!----></a></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td></tr> <tr><td>
-                                        vitri10[vi]<br> <span style="color: red;"></span></td> <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=4182492f-f6eb-4855-aa53-986dad611d9b">
-                                            Tin mới nhất
-                                        </a></td> <td>[12] News Left</td> <td>0</td> <td>Bật</td> <td><input type="text" name="sorted[4182492f-f6eb-4855-aa53-986dad611d9b]" value="14" style="width: 70px;"></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Xoá</span><!----></a></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td></tr> <tr><td>
-                                        vitri14[vi]<br> <span style="color: red;"></span></td> <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=8bd7bfda-a269-45e0-8cd8-e8213a44b7a3">
-                                            Form đăng ký
-                                        </a></td> <td>[15] Form đăng ký</td> <td>0</td> <td>Bật</td> <td><input type="text" name="sorted[8bd7bfda-a269-45e0-8cd8-e8213a44b7a3]" value="14" style="width: 70px;"></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Xoá</span><!----></a></td> <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td></tr></tbody></table> <input type="hidden" name="_token" value="LPulHD1lXmKcYt5ekKdqX0tXQOGR1snYZcpCGhJ6"></form></div></div> <input type="hidden" id="sortedAjax" value="https://admin.hoidoanhnghiepquan1.com/display/sorted/ajax"> <input type="hidden" id="copyPostAjax" value="https://admin.hoidoanhnghiepquan1.com/display/copy/ajax"> <input type="hidden" id="removePostAjax" value="https://admin.hoidoanhnghiepquan1.com/display/remove/ajax"></div>
-     
-                                    </div>
-                                </div>
+                                </div> <input type="hidden" id="sortedAjax" value="https://admin.hoidoanhnghiepquan1.com/display/sorted/ajax"> <input type="hidden" id="copyPostAjax" value="https://admin.hoidoanhnghiepquan1.com/display/copy/ajax"> <input type="hidden" id="removePostAjax" value="https://admin.hoidoanhnghiepquan1.com/display/remove/ajax">
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
