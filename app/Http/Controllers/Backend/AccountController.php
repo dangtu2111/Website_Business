@@ -14,6 +14,7 @@ class AccountController extends Controller
     }
     public function administrator(){
         $template = 'backend.account.administrator';
+        dd($template);
         $config['method']='create';
         // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
         return view('backend.layout.layout', compact( 'template','config'));
