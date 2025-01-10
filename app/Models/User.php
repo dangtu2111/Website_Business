@@ -18,31 +18,38 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'name',
+        'username',
+        'fullname',
         'email',
+        'phone_number',
+        'address',
         'password',
+        'role_id',
+        'status',
+        'deleted',
     ];
 
     /**
-     * The attributes that should be hidden for serialization.
+     * Các trường bị ẩn khi model được chuyển đổi thành mảng hoặc JSON.
      *
-     * @var list<string>
+     * @var array<int, string>
      */
     protected $hidden = [
         'password',
         'remember_token',
     ];
+    protected $dates = ['created_at', 'updated_at', 'deleted_at'];
 
     /**
-     * Get the attributes that should be cast.
+     * Quan hệ với bảng roles.
      *
-     * @return array<string, string>
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    protected function casts(): array
+    public function role()
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        return $this->belongsTo(Role::class);
     }
+    // Thêm các phương thức khác, ví dụ: bảo vệ mật khẩu
+   
 }
+

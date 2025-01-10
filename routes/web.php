@@ -9,8 +9,16 @@ use App\Http\Controllers\Backend\AttributeController;
 use App\Http\Controllers\Backend\ConfigController;
 use App\Http\Controllers\Backend\LocationController;
 use App\Http\Controllers\Backend\MenuController;
+use App\Http\Controllers\AuthController;
+use App\Http\Middleware\AuthenticateMiddleware;
 
-Route::group(['prefix' => 'admin'], function () {
+
+Route::get('/admin/login', [AuthController::class, 'index'])->name('admin.login');
+Route::post('/admin/auth', [AuthController::class, 'login'])->name('admin.auth');
+Route::get('/admin/logout', [AuthController::class, 'logout'])->name('admin.logout');
+
+
+Route::group(['prefix' => 'admin', 'middleware' => AuthenticateMiddleware::class], function () {
     Route::get('/', [StatisticalController::class, 'index'])->name('admin.home');
     Route::get('account', [AccountController::class, 'user'])->name('admin.account.accountUser');
     Route::get('account/admin', [AccountController::class, 'administrator'])->name('admin.account.accountAdmin');

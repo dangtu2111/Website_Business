@@ -60,7 +60,10 @@
                 <a href=""><i class="material-icons-two-tone">ballot</i>Quản lý giao diện<i class="material-icons has-sub-menu">keyboard_arrow_right</i></a>
                 <ul class="sub-menu" style="display: none;">
                     <li>
-                        <a href="{{route('admin.location')}}">Vị trí</a>
+                        <a href="{{route('admin.location')}}">Component</a>
+                    </li>
+                    <li>
+                        <a href="{{route('admin.location')}}">Page</a>
                     </li>
                     <li>
                         <a href="{{route('admin.menu')}}">Menu</a>
@@ -78,7 +81,7 @@
             </li>
 
             <li>
-                <a href="#"><i class="material-icons-two-tone">logout</i>Đăng xuất</a>
+                <a href="{{route('admin.logout')}}"><i class="material-icons-two-tone">logout</i>Đăng xuất</a>
             </li>
 
         </ul>
