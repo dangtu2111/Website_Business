@@ -12,5 +12,11 @@ class BlogController extends Controller
         // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
         return view('backend.layout.layout', compact( 'template','config'));
     }
+    public function blogs(){
+        $template = 'backend.content.blog';
+        $config['method']='create';
+        // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
+        return view('backend.layout.layout', compact( 'template','config'));
+    }
     
 }

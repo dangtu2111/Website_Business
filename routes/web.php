@@ -7,6 +7,8 @@ use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\AttributeController;
 use App\Http\Controllers\Backend\ConfigController;
+use App\Http\Controllers\Backend\LocationController;
+use App\Http\Controllers\Backend\MenuController;
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', [StatisticalController::class, 'index'])->name('admin.home');
@@ -20,4 +22,6 @@ Route::group(['prefix' => 'admin'], function () {
     // Route::get('referral', [AccountController::class, 'administrator'])->name('admin.referral');
     Route::get('config/info', [ConfigController::class, 'config_info'])->name('admin.config');
     Route::get('config/seo', [ConfigController::class, 'config_seo'])->name('admin.seo');
+    Route::get('display', [LocationController::class, 'location'])->name('admin.location');
+    Route::get('menu', [MenuController::class, 'menu'])->name('admin.menu');
 });

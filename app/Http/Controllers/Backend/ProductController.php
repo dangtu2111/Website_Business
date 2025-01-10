@@ -12,5 +12,10 @@ class ProductController extends Controller
         // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
         return view('backend.layout.layout', compact( 'template','config'));
     }
-    
+    public function products(){
+        $template = 'backend.content.product';
+        $config['method']='create';
+        // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
+        return view('backend.layout.layout', compact( 'template','config'));
+    }
 }
