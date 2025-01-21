@@ -15,37 +15,65 @@ function fixKeyTinyMce() {
 
 // function init Tinymce
 function initTinyMce(e) {
-    if (e == '') {
-        var text_editor = 'textarea';
-    } else {
-        var text_editor = 'textarea.' + e;
-    }
+    var text_editor = (e === '') ? 'textarea' : 'textarea.' + e;
+
     tinymce.init({
         selector: text_editor,
         height: 400,
         theme: 'modern',
         plugins: 'code autolink fullscreen image link media table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern help',
-        toolbar1: 'fullscreen | paste1 | code | fontsizeselect | fontselect | bold italic strikethrough forecolor backcolor | imageupload link media | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
+        toolbar1: 'fullscreen | paste1 | code | fontsizeselect | fontselect | bold italic strikethrough forecolor backcolor | image link media | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | removeformat',
         image_advtab: true,
         content_style: "body { font-size: 15px; font-family: Arial; }",
+        
+        // Cấu hình callback cho việc chọn file
+        file_picker_callback : function(callback, value, meta) {
+            var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+            var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+            console.log(meta.fieldname);
+            var cmsURL = editor_config.path_absolute + 'filemanager?editor=' + meta.fieldname;
+            if (meta.filetype == 'image') {
+              cmsURL = cmsURL + "&type=Images";
+            } else {
+              cmsURL = cmsURL + "&type=Files";
+            }
+      
+            tinyMCE.activeEditor.windowManager.openUrl({
+              url : cmsURL,
+              title : 'Filemanager',
+              width : x * 0.8,
+              height : y * 0.8,
+              resizable : "yes",
+              close_previous : "no",
+              onMessage: (api, message) => {
+                callback(message.content);
+              }
+            });
+        },
+        
         setup: function (editor) {
+            // Lắng nghe sự kiện thay đổi của editor
             editor.on('change', function () {
                 editor.save();
             });
-            var inp = $('<input id="tinymce-uploader" type="file" accept="image/*" style="display:none;">');
-            $(editor.getElement()).parent().append(inp);
-            inp.on("change", function () {
-                var input = inp.get(0);
-                uploadImg(input.files, editor, $('.parentId').val());
-            });
 
+            // Thêm nút upload hình ảnh (sử dụng FileManager)
             editor.addButton('imageupload', {
                 icon: "image",
-                onclick: function (e) {
-                    inp.trigger('click');
+                onclick: function () {
+                    // Mở trình quản lý hình ảnh thông qua FileManager
+                    tinymce.activeEditor.windowManager.open({
+                        file: '/filemanager?type=Images', // Đảm bảo đường dẫn này hợp lệ
+                        title: 'Filemanager',
+                        width: 800,
+                        height: 600,
+                        resizable: "yes",
+                        close_previous: "no"
+                    });
                 }
             });
 
+            // Thêm nút dán nội dung
             editor.addButton('paste1', {
                 icon: 'paste',
                 onclick: function () {
@@ -54,8 +82,11 @@ function initTinyMce(e) {
             });
         }
     });
+
     fixKeyTinyMce();
 }
+
+
 
 function postAjax(href, params, callback) { 
     var href = jQuery('#' + href).val();

@@ -28,15 +28,8 @@
 
 
             <li>
-                <a href=""><i class="material-icons-two-tone">list</i>Quản lý danh mục<i class="material-icons has-sub-menu">keyboard_arrow_right</i></a>
-                <ul class="sub-menu" style="display: none;">
-                    <li><a href="{{route('admin.category.blogs')}}">Bài viết</a></li>
-
-
-                    <li><a href="{{route('admin.category.products')}}">Sản phẩm</a></li>
-
-
-                   </ul>
+                <a href="{{route('admin.category')}}"><i class="material-icons-two-tone">list</i>Quản lý danh mục</a>
+                
             </li>
 
 
@@ -44,40 +37,40 @@
                 <a href=""><i class="material-icons-two-tone">ballot</i>Quản lý nội dung<i class="material-icons has-sub-menu">keyboard_arrow_right</i></a>
                 <ul class="sub-menu" style="display: none;">
                     <li>
-                        <a href="{{route('admin.blogs')}}">Bài viết</a>
+                        <a href="{{ route('admin.post.home') }}">Tất cả danh mục</a>
                     </li>
-
                     <li>
-                        <a href="{{route('admin.products')}}">Sản phẩm</a>
+                        <a href="{{ route('admin.post.home_user') }}">Trang chủ</a>
                     </li>
-
                     
+
+
+                    @foreach($categories as $category)
+                    <li>
+                        <a href="{{ route('admin.post', ['category' => $category->slug]) }}">{{ $category->name }}</a>
+                    </li>
+
+                    @endforeach
+
+
+
                 </ul>
+            </li>
+
+            
+            <li>
+                <a href="{{route('admin.menu')}}"><i class="material-icons-two-tone">ballot</i>Quản lí menu</a>
+                
+            </li>
+            <li>
+                <a href="{{route('admin.messager')}}"><i class="material-icons-two-tone">ballot</i>Quản lí tin nhắn</a>
+                
             </li>
 
 
             <li>
-                <a href=""><i class="material-icons-two-tone">ballot</i>Quản lý giao diện<i class="material-icons has-sub-menu">keyboard_arrow_right</i></a>
-                <ul class="sub-menu" style="display: none;">
-                    <li>
-                        <a href="{{route('admin.location')}}">Component</a>
-                    </li>
-                    <li>
-                        <a href="{{route('admin.location')}}">Page</a>
-                    </li>
-                    <li>
-                        <a href="{{route('admin.menu')}}">Menu</a>
-                    </li>
-                </ul>
-            </li>
-
-
-            <li>
-                <a href=""><i class="material-icons-two-tone">settings</i>Cài đặt<i class="material-icons has-sub-menu">keyboard_arrow_right</i></a>
-                <ul class="sub-menu" style="display: none;">
-                    <li><a href="{{route('admin.config')}}">Thông tin chung</a></li>
-                    <li><a href="{{route('admin.seo')}}">Seo</a></li>
-                </ul>
+                <a href="{{route('admin.config')}}"><i class="material-icons-two-tone">settings</i>Cài đặt</a>
+                
             </li>
 
             <li>

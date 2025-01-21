@@ -39,4 +39,5 @@ class BaseRepository implements BaseRepositoryInterface
     {
         return $this->model->where($column, $value);
     }
+    
 }

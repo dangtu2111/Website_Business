@@ -7,29 +7,29 @@
                             <div class="col-6 logo mb30">
                                 <a class="navbar-brand" href="index.html" title="Hội Doanh Nghiệp Quận 1">
                                     <img class="logo"
-                                        src="storage/fac8dcafc7346ea0ee5034d36f8734d1/2024/10/10/logo_1728534640_0028442816193195.jpg"
+                                        src="{{asset('Frontend/fac8dcafc7346ea0ee5034d36f8734d1/2024/10/10/logo_1728534640_0028442816193195.jpg')}}"
                                         alt="Hội Doanh Nghiệp Quận 1">
 
                                 </a>
                             </div>
                             <div class="col-6 right-content text-right mb30">
                                 <div class="social">
-                                    <a href="https://www.facebook.com/HoiDoanhNghiepQuan1" class="social-profile"
+                                    <a href="{{config('info.facebook')}}" class="social-profile"
                                         target="_blank">
                                         <img
-                                            src="storage/fac8dcafc7346ea0ee5034d36f8734d1/2024/10/11/fb_1728630470_6913223557677251.jpg">
+                                            src="{{asset('Frontend/fac8dcafc7346ea0ee5034d36f8734d1/2024/10/11/fb_1728630470_6913223557677251.jpg')}}">
 
                                         <span>facebook</span>
                                     </a>
-                                    <a href="https://www.youtube.com/@HộiDoanhNghiệpQuận1" class="social-profile"
+                                    <a href="{{config('info.youtube')}}" class="social-profile"
                                         target="_blank">
                                         <img
-                                            src="storage/fac8dcafc7346ea0ee5034d36f8734d1/2024/10/11/yt_1728630483_3630600216823441.jpg">
+                                            src="{{asset('Frontend/fac8dcafc7346ea0ee5034d36f8734d1/2024/10/11/yt_1728630483_3630600216823441.jpg')}}">
 
                                         <span>youtube</span>
                                     </a>
                                 </div>
-                                <a class="button" href="dang-ky-hoi-vien.html">Đăng ký tham gia</a>
+                                <a class="button" href="{{route('user.register')}}">Đăng ký tham gia</a>
                             </div>
                         </div>
                     </div>
@@ -46,8 +46,8 @@
                                 <div id="cwvnNavbar" class="collapse navbar-collapse">
                                     <ul class="nav navbar-nav cwvn-navbar-nav">
 
-                                        <li class="menu-item active">
-                                            <a href="index.html">Trang chủ</a>
+                                        <li class="menu-item ">
+                                            <a href="{{route('user.home')}}">Trang chủ</a>
                                         </li>
 
 
@@ -56,16 +56,16 @@
                                                     class="caret"></span></a>
                                             <ul class="dropdown-menu" role="menu">
                                                 <li class="menu-item">
-                                                    <a href="hoi-doanh-nghiep-quan-1.html">Hội Doanh Nghiệp Quận 1</a>
+                                                    <a href="{{route('user.home')}}/post/chung/hoi_doanh_nghiep_quan_1_dau_tau_ket_noi_va_dong_hanh_cung_doanh_nghiep">Hội Doanh Nghiệp Quận 1</a>
                                                 </li>
                                                 <li class="menu-item">
-                                                    <a href="cau-chuyen-thuong-hieu.html">Câu chuyện thương hiệu</a>
+                                                    <a href="{{route('user.home')}}/BLOG/cau-chuyen-thuong-hieu">Câu chuyện thương hiệu</a>
                                                 </li>
                                                 <li class="menu-item">
-                                                    <a href="tam-nhin.html">Tầm Nhìn - Sứ Mệnh</a>
+                                                    <a href="{{route('user.home')}}">Tầm Nhìn - Sứ Mệnh</a>
                                                 </li>
                                                 <li class="menu-item">
-                                                    <a href="gia-tri-cot-loi.html">Giá trị cốt lõi</a>
+                                                    <a href="{{route('user.home')}}">Giá trị cốt lõi</a>
                                                 </li>
 
                                             </ul>
@@ -77,10 +77,10 @@
                                                     class="caret"></span></a>
                                             <ul class="dropdown-menu" role="menu">
                                                 <li class="menu-item">
-                                                    <a href="tin-tuc.html">Tin tức</a>
+                                                    <a href="{{route('user.news')}}">Tin tức</a>
                                                 </li>
                                                 <li class="menu-item">
-                                                    <a href="su-kien.html">Sự kiện</a>
+                                                    <a href="{{route('user.event')}}">Sự kiện</a>
                                                 </li>
 
                                             </ul>
@@ -91,23 +91,23 @@
                                             <a class="dropdown-toggle" href="#">Hội viên <span class="caret"></span></a>
                                             <ul class="dropdown-menu" role="menu">
                                                 <li class="menu-item">
-                                                    <a href="dang-ky-hoi-vien.html">Đăng ký hội viên</a>
+                                                    <a href="{{route('user.register')}}">Đăng ký hội viên</a>
                                                 </li>
                                                 <li class="menu-item">
-                                                    <a href="quyen-loi-hoi-vien.html">Quyền lợi hội viên</a>
+                                                    <a href="{{route('user.interest')}}">Quyền lợi hội viên</a>
                                                 </li>
 
                                                 <li class="menu-item menu-item-has-children dropdown">
-                                                    <a href="#">Hội viên Doanh nghiệp</a>
+                                                    <a href="{{route('user.business')}}">Hội viên Doanh nghiệp</a>
                                                     <ul class="dropdown-menu" role="menu">
                                                         <li class="menu-item">
-                                                            <a href="#">Hội viên chính thức</a>
+                                                            <a href="{{route('user.parner')}}">Hội viên chính thức</a>
                                                         </li>
                                                         <li class="menu-item">
-                                                            <a href="#">Hội viên liên kết</a>
+                                                            <a href="{{route('user.parner')}}">Hội viên liên kết</a>
                                                         </li>
                                                         <li class="menu-item">
-                                                            <a href="#">Hội viên danh dự</a>
+                                                            <a href="{{route('user.parner')}}">Hội viên danh dự</a>
                                                         </li>
 
                                                     </ul>
@@ -117,11 +117,11 @@
                                         </li>
 
                                         <li class="menu-item ">
-                                            <a href="doi-tac.html">Đối tác</a>
+                                            <a href="{{route('user.parner')}}">Đối tác</a>
                                         </li>
 
                                         <li class="menu-item ">
-                                            <a href="lien-he.html">Liên hệ</a>
+                                            <a href="{{route('user.contact')}}">Liên hệ</a>
                                         </li>
                                     </ul>
                                 </div>

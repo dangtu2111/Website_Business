@@ -50,6 +50,10 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class);
     }
     // Thêm các phương thức khác, ví dụ: bảo vệ mật khẩu
+    public function messages()
+    {
+        return $this->morphMany(Message::class, 'from_user');
+    }
    
 }
 

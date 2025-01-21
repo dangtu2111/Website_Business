@@ -12,10 +12,6 @@
 <body>
     @include('frontend/component/header')
     @include('frontend/blogs/index')
-
-
-    
-
     
     @include('frontend/component/footer')
     

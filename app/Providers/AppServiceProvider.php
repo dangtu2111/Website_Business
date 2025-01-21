@@ -3,6 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Request;
+use App\Models\Category;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -12,19 +15,10 @@ class AppServiceProvider extends ServiceProvider
     public $serviceBindings=[
         'App\Services\Interfaces\UserServiceInterface'=>'App\Services\UserService',
         'App\Repositories\Interfaces\UserRepositoryInterface'=>'App\Repositories\UserRepository',
-        'App\Repositories\Interfaces\ContentRepositoryInterface'=>'App\Repositories\ContentRepository',
-        'App\Services\Interfaces\ContentServiceInterface'=>'App\Services\ContentService',
-        'App\Repositories\Interfaces\TourRepositoryInterface'=>'App\Repositories\TourRepository',
-        'App\Services\Interfaces\TourServiceInterface'=>'App\Services\TourService',
-        'App\Repositories\Interfaces\ImageRepositoryInterface'=>'App\Repositories\ImageRepository',
-        'App\Repositories\Interfaces\OrderDentailRepositoryInterface'=>'App\Repositories\OrderDentailRepository',
-        'App\Repositories\Interfaces\OrderRepositoryInterface'=>'App\Repositories\OrderRepository',
-        'App\Repositories\Interfaces\PaymentRepositoryInterface'=>'App\Repositories\PaymentRepository',
-        'App\Services\Interfaces\BookingServiceInterface'=>'App\Services\BookingService',
-        'App\Services\Interfaces\PaymentServiceInterface'=>'App\Services\PaymentService',
-
-
-
+        'App\Services\Interfaces\CategoryServiceInterface'=>'App\Services\CategoryService',
+        'App\Repositories\Interfaces\CategoryRepositoryInterface'=>'App\Repositories\CategoryRepository',
+        'App\Services\Interfaces\PostServiceInterface'=>'App\Services\PostService',
+        'App\Repositories\Interfaces\PostRepositoryInterface'=>'App\Repositories\PostRepository',
     ];
     public function register(): void
     {
@@ -38,6 +32,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        
     }
 }

@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
 
+use Illuminate\Support\Facades\View;
+use App\Models\Category;
+
 
 class AuthenticateMiddleware
 {
@@ -21,6 +24,9 @@ class AuthenticateMiddleware
         {
             return redirect()->route('admin.login')->with('error', 'Login to send');
         }
+        $categories = Category::all();
+        // Chia sẻ dữ liệu với các view trong khu vực admin
+        View::share('categories', $categories);
         return $next($request);
     }
 }

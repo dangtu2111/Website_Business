@@ -3,23 +3,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="csrf-token" content="f8MrJ9J0x0xHnHFINR3Qp3uCeCNcTk2xOoIbTYYF" />
     <title>Hội Doanh Nghiệp Quận 1</title>
-    <link rel="shortcut icon"
-        href="storage/fac8dcafc7346ea0ee5034d36f8734d1/wp-content/uploads/100/2024/10/10/logo_1728534640_0028442816193195.jpg" />
-    <link href="storage/css/fontawesome/css/all.min.css" rel="stylesheet" defer>
-    <link rel="stylesheet" href="storage/plugins/bootstrap/css/bootstrap.min9ed2.css?v=1736487372" />
-    <link rel="stylesheet" href="storage/plugins/swiper/css/swiper-bundle.min9ed2.css?v=1736487372" defer>
-    <link rel="stylesheet" href="storage/plugins/ui/style.css" defer>
-    <link rel="stylesheet" href="storage/plugins/aos/aos9ed2.css?v=1736487372" defer>
+    <link rel="shortcut icon" href="{{ asset('Frontend/fac8dcafc7346ea0ee5034d36f8734d1/wp-content/uploads/100/2024/10/10/logo_1728534640_0028442816193195.jpg') }}" />
 
-    <link href="storage/css/owl.carousel.css" rel="stylesheet">
-    <link href="storage/css/owl.theme.css" rel="stylesheet">
-    <link href="storage/css/forall9ed2.css?v=1736487372" rel="stylesheet">
-    <link href="storage/css/settings9ed2.css?v=1736487372" rel="stylesheet">
+<link href="{{ asset('Frontend/css/fontawesome/css/all.min.css') }}" rel="stylesheet" defer>
+<link rel="stylesheet" href="{{ asset('Frontend/plugins/bootstrap/css/bootstrap.min9ed2.css?v=1736487372') }}" />
+<link rel="stylesheet" href="{{ asset('Frontend/plugins/swiper/css/swiper-bundle.min9ed2.css?v=1736487372') }}" defer>
+<link rel="stylesheet" href="{{ asset('Frontend/plugins/ui/style.css') }}" defer>
+<link rel="stylesheet" href="{{ asset('Frontend/plugins/aos/aos9ed2.css?v=1736487372') }}" defer>
 
-    <link href="storage/css/style9ed2.css?v=1736487372" rel="stylesheet">
-    <link href="storage/css/main9ed2.css?v=1736487372" rel="stylesheet">
+<link href="{{ asset('Frontend/css/owl.carousel.css') }}" rel="stylesheet">
+<link href="{{ asset('Frontend/css/owl.theme.css') }}" rel="stylesheet">
+<link href="{{ asset('Frontend/css/forall9ed2.css?v=1736487372') }}" rel="stylesheet">
+<link href="{{ asset('Frontend/css/settings9ed2.css?v=1736487372') }}" rel="stylesheet">
+
+<link href="{{ asset('Frontend/css/style9ed2.css?v=1736487372') }}" rel="stylesheet">
+<link href="{{ asset('Frontend/css/main9ed2.css?v=1736487372') }}" rel="stylesheet">
+
 
     <style>
+        .breadcrumb-item+.breadcrumb-item::before {
+    float: left;
+    padding-right: .5rem;
+    color: white;
+    content: var(--bs-breadcrumb-divider, "/");}
+
         a.m57-form-btn-show {
             background: #fff;
             color: #fff !important;

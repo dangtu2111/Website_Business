@@ -7,7 +7,7 @@
                 style="display: none; max-height: 700px; height: 700px;">
                 <ul>
                     <li data-transition="random" data-slotamount="7" data-saveperformance="off">
-                        <img src="storage/fac8dcafc7346ea0ee5034d36f8734d1/wp-content/uploads/1400/2024/10/11/CoverFB_1728615778_8526523090713101.jpg"
+                        <img src="{{ asset($config['banner']['img']) }}"
                             alt="" data-bgposition="center top" data-bgfit="cover"
                             data-bgrepeat="no-repeat" />
                     </li>

@@ -7,7 +7,7 @@
                         </div>
                         <div class="col-md-5 col-sm-12 mb30 content"></div>
                         <div class="col-md-3 col-sm-12 text-right mb30">
-                            <a class="button bt-white" href="#">Đăng ký tham gia</a>
+                            <a class="button bt-white" href="{{route('user.register')}}">Đăng ký tham gia</a>
                         </div>
                     </div>
                 </div>

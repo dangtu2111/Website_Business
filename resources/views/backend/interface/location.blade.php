@@ -59,7 +59,7 @@
                                                         <td>
                                                             trang1[vi]<br> <span style="color: red;">Trang chủ</span></td>
                                                         <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=a9195cd9-3ac5-428b-824e-9bcf43199198">
-                                                                Slideshow
+                                                                Trang chủ
                                                             </a></td>
                                                         <td>{{route('admin.home')}}</td>
                                                        
@@ -72,7 +72,7 @@
                                                         <td>
                                                             trang1[vi]<br> <span style="color: red;">Trang chủ</span></td>
                                                         <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=a9195cd9-3ac5-428b-824e-9bcf43199198">
-                                                                Slideshow
+                                                        Hội Doanh Nghiệp Quận 1
                                                             </a></td>
                                                         <td>{{route('admin.home')}}</td>
                                                        
@@ -85,7 +85,7 @@
                                                         <td>
                                                             trang1[vi]<br> <span style="color: red;">Trang chủ</span></td>
                                                         <td><a href="https://admin.hoidoanhnghiepquan1.com/display/detail?id=a9195cd9-3ac5-428b-824e-9bcf43199198">
-                                                                Slideshow
+                                                        CÂU CHUYỆN THƯƠNG HIỆU
                                                             </a></td>
                                                         <td>{{route('admin.home')}}</td>
                                                        
