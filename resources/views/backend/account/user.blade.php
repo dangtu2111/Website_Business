@@ -10,7 +10,7 @@
                         <div class="card-body">
                             <div id="page">
                                 <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-3 text-right"><a href="https://admin.hoidoanhnghiepquan1.com/account/admin/add" class="btn btn-success bt-add" style="margin-right: 0px;">Tạo tài khoản</a></div>
+                                    <div class="col-md-12 col-sm-12 col-xs-3 text-right"><a href="{{route('admin.account.createUser')}}" class="btn btn-success bt-add" style="margin-right: 0px;">Tạo tài khoản</a></div>
                                     <div class="col-lg-3 col-sm-6 col-md-6 col-xs-6">
                                         <div class="el-select" style="width: 100%;"><!---->
                                             <div class="el-input el-input--suffix"><!----><input type="text" readonly="readonly" autocomplete="off" placeholder="Status" class="el-input__inner"><!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span><!----></span><!----><!----></div>
@@ -49,20 +49,19 @@
                                             </tr>
                                         </thead>
                                         <tbody id="products-body">
-                                            <tr id="item0" class="item mini">
-                                                <td><a href="/account/admin/edit/ab3432d7-d225-4b67-a3db-62c5b6165421" class="bold text-primary"><span>info</span></a></td>
-                                                <td><span>info</span></td>
-                                                <td><span></span></td>
-                                                <td><span>info@hoidoanhnghiepquan1.com</span></td>
-                                                <td><a href="/account/admin/permission/ab3432d7-d225-4b67-a3db-62c5b6165421">Phân quyền</a></td>
-                                            </tr>
-                                            <tr id="item1" class="item mini">
-                                                <td><a href="/account/admin/edit/17a16ce6-8ff0-4faf-b32b-ef8e29965c5f" class="bold text-primary"><span>admin</span></a></td>
-                                                <td><span>Admin</span></td>
-                                                <td><span></span></td>
-                                                <td><span>admin@hoidoanhnghiepquan1.com</span></td>
-                                                <td><a href="/account/admin/permission/17a16ce6-8ff0-4faf-b32b-ef8e29965c5f">Phân quyền</a></td>
-                                            </tr>
+                                            @if(isset($users))
+                                                @foreach($users as $user)
+                                                <tr id="item0" class="item mini">
+                                                    <td><a href="/account/admin/edit/ab3432d7-d225-4b67-a3db-62c5b6165421" class="bold text-primary"><span>info</span></a></td>
+                                                    <td><span>info</span></td>
+                                                    <td><span></span></td>
+                                                    <td><span>info@hoidoanhnghiepquan1.com</span></td>
+                                                    <td><a href="/account/admin/permission/ab3432d7-d225-4b67-a3db-62c5b6165421">Phân quyền</a></td>
+                                                </tr>
+                                                @endforeach
+                                            @endif
+                                            
+                                           
                                         </tbody>
                                     </table>
                                 </div>

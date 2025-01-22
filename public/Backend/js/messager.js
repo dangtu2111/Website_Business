@@ -45,7 +45,7 @@ $(document).ready(function () {
                         // Tạo phần tử tin nhắn khi từ người dùng là khách hàng
                         messageElement = $(`
                             <div class="message sent">
-                                <img src="https://placehold.co/40x40" alt="Profile picture of User">
+                                <span class="time">23:15</span>
                                 <div class="message-content">
                                     <p>${message.message}</p> <!-- Chèn nội dung tin nhắn vào đây -->
                                 </div>
@@ -58,7 +58,8 @@ $(document).ready(function () {
                                 <div class="message-content">
                                     <p>${message.message}</p> <!-- Chèn nội dung tin nhắn vào đây -->
                                 </div>
-                                <img src="https://placehold.co/40x40" alt="Profile picture of Phuong Dang">
+            <span class="time">23:15</span>
+                                
                             </div>
                         `);
                     }
@@ -138,7 +139,7 @@ $(document).ready(function () {
                     $("#chat-messages").append(
                         `
                             <div class="message sent">
-                                <img src="https://placehold.co/40x40" alt="Profile picture of User">
+                                <span class="time">23:15</span>
                                 <div class="message-content">
                                     <p>${data.message.message}</p> <!-- Chèn nội dung tin nhắn vào đây -->
                                 </div>
@@ -151,7 +152,8 @@ $(document).ready(function () {
                                 <div class="message-content">
                                     <p>${data.message.message}</p> <!-- Chèn nội dung tin nhắn vào đây -->
                                 </div>
-                                <img src="https://placehold.co/40x40" alt="Profile picture of Phuong Dang">
+                                <span class="time">23:15</span>
+                                
                             </div>
                         `
                     );

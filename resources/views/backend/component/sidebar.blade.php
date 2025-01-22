@@ -17,13 +17,8 @@
 
 
             <li>
-                <a href=""><i class="material-icons-two-tone">people_alt</i>Tài khoản<i class="material-icons has-sub-menu">keyboard_arrow_right</i></a>
-                <ul class="sub-menu" style="display: none;">
-                    <li><a href="{{route('admin.account.accountUser')}}">Thành viên</a></li>
-
-                    <li><a href="{{route('admin.account.accountAdmin')}}">Quản trị viên</a></li>
-
-                </ul>
+                <a href="{{route('admin.account.accountUser')}}"><i class="material-icons-two-tone">people_alt</i>Tài khoản</a>
+               
             </li>
 
 

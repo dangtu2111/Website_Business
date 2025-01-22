@@ -30,7 +30,8 @@ Route::get('/admin/logout', [AuthController::class, 'logout'])->name('admin.logo
 Route::group(['prefix' => 'admin', 'middleware' => AuthenticateMiddleware::class], function () {
     Route::get('/', [StatisticalController::class, 'index'])->name('admin.home');
     Route::get('account', [AccountController::class, 'user'])->name('admin.account.accountUser');
-    Route::get('account/admin', [AccountController::class, 'administrator'])->name('admin.account.accountAdmin');
+    Route::get('account/create', [AccountController::class, 'createUser'])->name('admin.account.createUser');
+    Route::post('account/create/post', [AccountController::class, 'createUserPost'])->name('admin.account.createUser.post');
     Route::get('category', [BlogController::class, 'category'])->name('admin.category');
     Route::get('category/insert', [BlogController::class, 'category_insert'])->name('admin.category.insert');
     Route::get('category/edit/{id}', [BlogController::class, 'category_edit'])->name('admin.category.edit');

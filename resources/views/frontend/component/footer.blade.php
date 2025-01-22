@@ -60,39 +60,44 @@
         color: #6b7280;
         font-size: 16px;
     }
+
     .chat-body::-webkit-scrollbar {
-    width: 0px;  /* Ẩn thanh cuộn */
-}
+        width: 0px;
+        /* Ẩn thanh cuộn */
+    }
 
     .chat-body {
-    padding: 16px;
-    display: flex;
-    flex-direction: column-reverse;  /* Đảo chiều của các phần tử con */
-    overflow-y: auto;
-}
+        padding: 16px;
+        display: flex;
+        flex-direction: column-reverse;
+        /* Đảo chiều của các phần tử con */
+        overflow-y: auto;
+    }
 
-.chat-body .message {
-    display: flex;
-    justify-content: flex-end;  /* Căn phải */
-    margin-left:auto;
-    align-items: center;
-    margin-bottom: 8px;
-    max-width: 80%;
-    border-radius: 4px;
-    padding: 10px;
-}
+    .chat-body .message {
+        display: flex;
+        justify-content: flex-end;
+        /* Căn phải */
+        margin-left: auto;
+        align-items: center;
+        margin-bottom: 8px;
+        max-width: 80%;
+        border-radius: 4px;
+        padding: 10px;
+    }
 
-.chat-body .response {
-    display: flex;
-    justify-content: flex-start;  /* Căn trái */
-    align-items: center;
-    margin-bottom: 8px;
-    max-width: 80%;
-    border-radius: 4px;
-    padding: 10px;
-    margin-right:auto;
+    .chat-body .response {
+        display: flex;
+        justify-content: flex-start;
+        /* Căn trái */
+        align-items: center;
+        margin-bottom: 8px;
+        max-width: 80%;
+        border-radius: 4px;
+        padding: 10px;
+        margin-right: auto;
 
-}
+    }
 
 
     .chat-body .message .text {
@@ -101,7 +106,7 @@
         font-size: 12px;
         border-radius: 12px;
         padding: 4px 8px;
-        
+
     }
 
     .chat-body .message .time {
@@ -196,8 +201,8 @@
         </div>
     </div>
     <div class="chat-body" id="chat-body" style="height:350px">
-        
-        
+
+
     </div>
     <div class="chat-footer">
         <input type="text" id="input-send" placeholder="Nhập nội dung cần hỗ trợ">

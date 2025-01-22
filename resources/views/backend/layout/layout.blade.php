@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-@include('Backend/component/head')
+@include('backend/component/head')
 
 <body class="pace-running ">
     <div class="pace pace-active">
@@ -10,9 +10,9 @@
         <div class="pace-activity"></div>
     </div>
     <div class="app full-width-header align-content-stretch d-flex flex-wrap">
-        @include('Backend/component/sidebar')
+        @include('backend/component/sidebar')
         <div class="app-container">
-            @include('Backend/component/header')
+            @include('backend/component/header')
             @include($template)
             
            
@@ -20,7 +20,7 @@
         <div class="hide-app-sidebar-mobile"></div>
     </div>
 
-    @include('Backend/component/script')
+    @include('backend/component/script')
 
 </body>
 
