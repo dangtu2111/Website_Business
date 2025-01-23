@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{asset('backend/summernote/summernote-lite.min.css')}}">
+<link rel="stylesheet" href="{{asset('Backend/summernote/summernote-lite.min.css')}}">
 <div class="app-content">
     <div class="content-wrapper">
         <div class="container-fluid">

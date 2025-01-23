@@ -98,7 +98,7 @@ class BlogController extends Controller
             'Backend/summernote/summernote-lite.min.js'
         ];
         $config['css'] = [
-            'backend/summernote/summernote-lite.min.css',
+            'Backend/summernote/summernote-lite.min.css',
         ];
         // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
         return view('backend.layout.layout', compact('template', 'config'));
@@ -164,7 +164,7 @@ class BlogController extends Controller
             'Backend/summernote/summernote-lite.min.js'
         ];
         $config['css'] = [
-            'backend/summernote/summernote-lite.min.css',
+            'Backend/summernote/summernote-lite.min.css',
         ];
         $post = $this->postRepository->findById($id);
 
