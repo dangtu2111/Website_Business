@@ -274,7 +274,7 @@
     });
     
 </script>
-<script type="text/javascript">
+<script type="text/javascript" src="{{asset('Frontend\js\home\main.js')}}">
     // if (notificationsCount <= 0) {
     //     notificationsWrapper.hide();
     // }
