@@ -35,10 +35,10 @@ class BlogController extends Controller
     {
         $template = 'backend.category.category';
         $config['method'] = 'create';
-        $categories = $this->categoryRepository->all();
+        $categories_item = $this->categoryRepository->all();
 
         // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
-        return view('backend.layout.layout', compact('template', 'config'));
+        return view('backend.layout.layout', compact('template', 'config', 'categories_item'));
     }
     public function category_insert()
     {
@@ -126,10 +126,10 @@ class BlogController extends Controller
             'Backend/js/insert_blog/main.js',
         ];
         
-        $categories = $this->categoryRepository->whereCategory($category);
+        $categories_item = $this->categoryRepository->whereCategory($category);
        
         // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
-        return view('backend.layout.layout', compact('template', 'config','categories'));
+        return view('backend.layout.layout', compact('template', 'config','categories_item'));
     }
     public function post_home()
     {
@@ -139,10 +139,10 @@ class BlogController extends Controller
         $config['js'] = [
             'Backend/js/insert_blog/main.js',
         ];
-        $categories = $this->categoryRepository->allWithPost();
+        $categories_item = $this->categoryRepository->allWithPost();
         
         // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
-        return view('backend.layout.layout', compact('template', 'config', 'categories'));
+        return view('backend.layout.layout', compact('template', 'config', 'categories_item'));
     }
     public function home_user()
     {

@@ -99,8 +99,8 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @if(isset($categories))
-                                                    @foreach($categories as $category)
+                                                    @if(isset($categories_item))
+                                                    @foreach($categories_item as $category)
                                                     <tr>
                                                         <td>
                                                             <a href="{{route('admin.category.edit',["id"=>$category->id])}}">{{$category->name }}</a>

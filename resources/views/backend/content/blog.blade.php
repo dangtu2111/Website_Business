@@ -40,7 +40,7 @@
                                                         <div class="el-scrollbar" style="">
                                                             <div class="el-select-dropdown__wrap el-scrollbar__wrap" style="margin-bottom: -17px; margin-right: -17px;">
                                                                 <ul class="el-scrollbar__view el-select-dropdown__list"><!---->
-                                                                    @foreach($categories as $category)
+                                                                    @foreach($categories_item as $category)
                                                                     <li class="el-select-dropdown__item"><span>{{$category->name}}</span></li>
 
 
@@ -79,8 +79,8 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @if(isset($categories))
-                                                    @foreach($categories as $category)
+                                                    @if(isset($categories_item))
+                                                    @foreach($categories_item as $category)
                                                     @if($category->post->isNotEmpty()) <!-- Kiểm tra xem category có ít nhất 1 post -->
                                                     @foreach($category->post as $post)
                                                     <tr role="row" class="even">
