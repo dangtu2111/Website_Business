@@ -263,7 +263,7 @@
 
                                                                             <div
                                                                                 class="el-input el-input--suffix">
-                                                                                        <input type="hidden" class="category_id" name="category_id" value="{{ old('category_id',$post->category_id ?? "") }}" >
+                                                                                        <input type="hidden" class="category_id" name="category_id" value="{{ old('category_id',$post->category_id ?? "") }}"  required>
                                                                                 <!----><input type="text"
                                                                                     readonly="readonly"
                                                                                     autocomplete="off"
@@ -271,7 +271,7 @@
                                                                                    
                                                                                     class=" el-input__inner"
                                                                                     style="height: 40px;
-                                                                                    "><!----><span
+                                                                                    " required><!----><span
                                                                                     class="el-input__suffix"><span
                                                                                         class="el-input__suffix-inner"><i
                                                                                             class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span><!----></span><!----><!---->
