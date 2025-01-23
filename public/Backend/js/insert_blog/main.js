@@ -117,7 +117,7 @@ $(document).ready(function () {
 
 $("#lfm").filemanager("image");
 $(document).ready(function () {
-    var statusValue = $(".status").val() === "true";
+    var statusValue = $(".status").val() === "true"||$(".status").val() === "1" ;
     var parent = $(".el-switch");
 
     // Cập nhật trạng thái ban đầu

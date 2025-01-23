@@ -43,7 +43,7 @@ class PostService implements PostServiceInterface
         try {
             // Loại bỏ các yếu tố không cần thiết trong request
             $payload = $request->except(['_token', 'send']);
-     
+            
             $data = [
                 "title" => $payload["title"],
                 "slug" => $payload["slug"],
@@ -80,7 +80,7 @@ class PostService implements PostServiceInterface
         try {
             // Loại bỏ các yếu tố không cần thiết trong request
             $payload = $request->except(['_token', 'send']);
-            
+            dd($payload);
             $data = [
                 "title" => $payload["title"],
                 "slug" => $payload["slug"],
