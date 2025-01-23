@@ -200,7 +200,73 @@
     });
 </script>
 <script src="//js.pusher.com/3.1/pusher.min.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        function stringHtml(menu_item) {
+        var html = "";
 
+        // Kiểm tra nếu không có phần tử con
+        if (!menu_item.child) {
+            var link = menu_item.link ? menu_item.link : "#"; // Thêm giá trị mặc định cho link nếu không có
+            html += `
+                <li class="menu-item">
+                    <a href="${link}">${menu_item.name}</a>
+                </li>`;
+        } else {
+            // Nếu có phần tử con
+            var link = menu_item.link ? menu_item.link : "#";
+            html += `
+                <li class="menu-item menu-item-has-children dropdown">
+                    <a class="dropdown-toggle" href="${link}">
+                        ${menu_item.name} <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">`;
+
+            // Đệ quy gọi lại hàm stringHtml cho các phần tử con
+            $.each(menu_item.child, function (key1, child) {
+                html += stringHtml(child); // Gọi đệ quy cho các phần tử con
+            });
+
+            html += "</ul>";
+            html += "</li>";
+        }
+
+        return html;
+    }
+
+    function updateMenu() {
+        const appUrl = document.querySelector('meta[name="app-url"]').getAttribute('content');
+        
+        $.ajax({
+            url: appUrl+"/client/menu/get-menu", // URL của API
+            type: "GET", // Phương thức GET
+            dataType: "json", // Dữ liệu trả về dưới dạng JSON
+            success: function (response) {
+                if (response.menus) {
+                    // Gọi hàm stringHtml để tạo HTML từ dữ liệu trả về
+                    var menuHtml =
+                        '<ul class="nav navbar-nav cwvn-navbar-nav">';
+                    console.log(response.menus);
+                    $.each(response.menus, function (key, menu) {
+                        menuHtml += stringHtml(menu); // Gọi hàm stringHtml để tạo HTML
+                    });
+                    menuHtml += "</ul>";
+                    // Thêm HTML vào phần tử có id là 'cwvnNavbar'
+                    $("#cwvnNavbar").html(menuHtml);
+                }
+            },
+            error: function (xhr, status, error) {
+                // Xử lý khi có lỗi
+                console.error("Error:", error);
+            },
+        });
+    }
+    
+
+    updateMenu(); // Gọi hàm updateMenu để tải menu khi trang được tải
+    });
+    
+</script>
 <script type="text/javascript">
     // if (notificationsCount <= 0) {
     //     notificationsWrapper.hide();
