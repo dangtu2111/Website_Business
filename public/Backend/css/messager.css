@@ -156,13 +156,13 @@
     margin-bottom:0 ;
 
 }
-.message_sent .message-content p{
+.message.sent .message-content p{
     margin-bottom:0;
 }
 .message.received .message-content {
     background-color: #f0f2f5;
 }
-.message_sent .message-content{
+.message.sent .message-content{
     margin-left:10px;
 }
 .chat-footer {
