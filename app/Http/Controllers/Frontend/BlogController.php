@@ -30,6 +30,9 @@ class BlogController extends Controller
         $template = 'frontend.blogs.template';
         $config['method']='create';
         $categories_item= $this->categoryRepository->findBySlug($slug);
+        $config['title']=$categories_item->name;
+       
+
         
         $posts=$this->postRepository->findBy_CategoryId($categories_item->id);
 
@@ -42,6 +45,8 @@ class BlogController extends Controller
         
         $category= $this->categoryRepository->findBySlug($categorySlug);
         $post=$this->postRepository->findBySlug($postSlug);
+        $config['title']=$post->title;
+
    
 
         // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'

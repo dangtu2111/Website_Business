@@ -10,7 +10,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="page_title text-center">
-          <h1 class="ldtl-page-title">{{ ($category->name ?? "Đây là một Page") }}</h1>
+          <h1 class="ldtl-page-title">{{ ($config['title']??($category->name ?? "Đây là một Page")) }}</h1>
           <ul class="breadcrumb justify-content-center" style="color:white">
             <li class="breadcrumb-item">
               <a href="index.html">Trang chủ</a>
