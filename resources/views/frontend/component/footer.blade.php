@@ -192,7 +192,7 @@
         <div class="avatar">
             <img src="https://storage.googleapis.com/a1aa/image/TikMHMcGLneuPJ4Z2w1EAImG-4G8hW_HYlooIFL-IBI.jpg" alt="Assistant Avatar">
             <div class="info">
-                <p class="name">Trợ lý ảo MyViettel</p>
+                <p class="name">Trợ lý ảo </p>
                 <p class="status">Online</p>
             </div>
         </div>
