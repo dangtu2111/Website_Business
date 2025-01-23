@@ -32,8 +32,10 @@ jQuery(document).ready(function ($) {
     }
 
     function updateMenu() {
+        const appUrl = document.querySelector('meta[name="app-url"]').getAttribute('content');
+        
         $.ajax({
-            url: "http://127.0.0.1:8000/client/menu/get-menu", // URL của API
+            url: appUrl+"/client/menu/get-menu", // URL của API
             type: "GET", // Phương thức GET
             dataType: "json", // Dữ liệu trả về dưới dạng JSON
             success: function (response) {
@@ -151,8 +153,10 @@ jQuery(document).ready(function ($) {
     });
     
     function sendMessage(chatId, senderId, message) {
+        const appUrl = document.querySelector('meta[name="app-url"]').getAttribute('content');
+
         $.ajax({
-            url: "http://127.0.0.1:8000/messages",
+            url: appUrl+"/messages",
             type: "POST",
             data: JSON.stringify({
                 chat_id: chatId,
@@ -258,9 +262,10 @@ jQuery(document).ready(function ($) {
                         description: yeucau,
                         _token: $("#token").val(), // CSRF token (nếu cần)
                     };
+                    const appUrl = document.querySelector('meta[name="app-url"]').getAttribute('content');
 
                     $.ajax({
-                        url: "http://127.0.0.1:8000/chats", // Đường dẫn đến route của Laravel
+                        url: appUrl+"/chats", // Đường dẫn đến route của Laravel
                         type: "POST",
                         data: datax,
                         success: function (response) {

@@ -1,7 +1,9 @@
 $(document).ready(function () {
+
     function sendMessage(chatId, senderId, message) {
+        const appUrl = document.querySelector('meta[name="app-url"]').getAttribute('content');
         $.ajax({
-            url: "http://127.0.0.1:8000/messages",
+            url: appUrl+"/messages",
             type: "POST",
             data: JSON.stringify({
                 chat_id: chatId,

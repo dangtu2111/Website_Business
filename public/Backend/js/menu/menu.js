@@ -120,7 +120,9 @@ $(document).ready(function () {
     });
     $(document).on("click", ".remove-menu", function () {
         var id = $(this).attr("data-id");
-        var urlDelete = "http://127.0.0.1:8000/admin/menu/delete/" + id;
+        const appUrl = document.querySelector('meta[name="app-url"]').getAttribute('content');
+
+        var urlDelete = appUrl+"/admin/menu/delete/" + id;
         updateSort();
         $.ajax({
             url: urlDelete, // URL của API
@@ -204,8 +206,10 @@ $(document).ready(function () {
     }
 
     function updateMenu() {
+        const appUrl = document.querySelector('meta[name="app-url"]').getAttribute('content');
+
         $.ajax({
-            url: "http://127.0.0.1:8000/client/menu/get-menu", // URL của API
+            url: appUrl+"/client/menu/get-menu", // URL của API
             type: "GET", // Phương thức GET
             dataType: "json", // Dữ liệu trả về dưới dạng JSON
             success: function (response) {
