@@ -84,7 +84,7 @@
                                                     @if($category->post->isNotEmpty()) <!-- Kiểm tra xem category có ít nhất 1 post -->
                                                     @foreach($category->post as $post)
                                                     <tr role="row" class="even">
-                                                        <td>1</td>
+                                                        <td>{{$post->id}}</td>
                                                         <td><a href="{{route('admin.post.edit',['id'=>$post->id])}}">
                                                                 {{$post->title}}
                                                             </a> <br>
