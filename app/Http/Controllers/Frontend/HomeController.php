@@ -22,9 +22,7 @@ class HomeController extends Controller
         $news=$this->postRepository->paginateWhereId(intval($config['news']['category']),3);
         // Truyền cấu hình đến View
    
-        $config['js']=[
-            'Frontend\js\home\main.js',
-        ];
+       
        
         $template = 'frontend.home.index';
 
