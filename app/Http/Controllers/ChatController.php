@@ -47,7 +47,7 @@ class ChatController extends Controller
         dd($chat);
         return response()->json(['chat' => $chat], 200);
     }
-    public function sendMessage(Request $request): JsonResponse|mixed
+    public function sendMessage(Request $request)
     {   
      
         $message = Message::create([
