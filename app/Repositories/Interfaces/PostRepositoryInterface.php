@@ -10,6 +10,7 @@ interface PostRepositoryInterface extends BaseRepositoryInterface
 {
     public function getAllPaginate();
     public function findBySlug($slug);
+    public function findBy_CategoryId($id);
     
     public function allWithCategory();
     

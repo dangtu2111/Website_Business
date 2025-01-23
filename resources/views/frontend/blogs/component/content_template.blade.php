@@ -4,39 +4,8 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-12" id="primary">
                         <div class="post-list">
-                            :
-                            <div id="post-31681"
-                                class="post-item post-31681 post type-post status-publish format-standard has-post-thumbnail hentry category-tin-tuc category-goc-bao-chi">
-                                <div class="row align-items-center">
-                                    <div class="col-md-5 col-sm-4 mb30">
-                                        <div class="thumb">
-                                            <a href="https://hoidoanhnghiepquan1.com/cau-chuyen-thuong-hieu.html"
-                                                title="CÂU CHUYỆN THƯƠNG HIỆU">
-
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7 col-sm-8 mb30">
-                                        <a href="https://hoidoanhnghiepquan1.com/cau-chuyen-thuong-hieu.html"
-                                            title="CÂU CHUYỆN THƯƠNG HIỆU">
-                                            <h4 class="title">CÂU CHUYỆN THƯƠNG HIỆU</h4>
-                                        </a>
-                                        <div class="meta mb10">
-                                            <span><i class="fa fa-clock-o" aria-hidden="true"></i> 11/10/2024</span>
-                                                <i class="fa fa-list-alt" aria-hidden="true"></i>
-                                            <a href=""></a>
-                                        </div>
-                                        <div class="excerpt mb15">
-                                            <p>
-
-                                            </p>
-                                        </div>
-                                        <div class="readmore"><a class="button transparent-primary"
-                                                href="https://hoidoanhnghiepquan1.com/cau-chuyen-thuong-hieu.html">View
-                                                more</a></div>
-                                    </div>
-                                </div>
-                            </div>
+                            @if(isset($posts))
+                            @foreach($posts as $post)
                             :
                             <div id="post-31681"
                                 class="post-item post-31681 post type-post status-publish format-standard has-post-thumbnail hentry category-tin-tuc category-goc-bao-chi">
@@ -46,7 +15,7 @@
                                             <a href="https://hoidoanhnghiepquan1.com/hoi_doanh_nghiep_quan_1_tang_cuong_vai_tro_cau_noi_giua_doanh_nghiep_va_chinh_quyen.html"
                                                 title="HỘI DOANH NGHIỆP QUẬN 1 TĂNG CƯỜNG VAI TRÒ CẦU NỐI GIỮA DOANH NGHIỆP VÀ CHÍNH QUYỀN">
                                                 <img width="380" height="250"
-                                                    src="images/z5916278040335_d5665af90e0fa2f1a3273890593157a9_1728631856_5584278008528905.jpg"
+                                                    src="{{$post->cover_image}}"
                                                     class="attachment-380x250 size-380x250 wp-post-image"
                                                     alt="HỘI DOANH NGHIỆP QUẬN 1 TĂNG CƯỜNG VAI TRÒ CẦU NỐI GIỮA DOANH NGHIỆP VÀ CHÍNH QUYỀN">
 
@@ -56,11 +25,10 @@
                                     <div class="col-md-7 col-sm-8 mb30">
                                         <a href="https://hoidoanhnghiepquan1.com/hoi_doanh_nghiep_quan_1_tang_cuong_vai_tro_cau_noi_giua_doanh_nghiep_va_chinh_quyen.html"
                                             title="HỘI DOANH NGHIỆP QUẬN 1 TĂNG CƯỜNG VAI TRÒ CẦU NỐI GIỮA DOANH NGHIỆP VÀ CHÍNH QUYỀN">
-                                            <h4 class="title">HỘI DOANH NGHIỆP QUẬN 1 TĂNG CƯỜNG VAI TRÒ CẦU NỐI GIỮA
-                                                DOANH NGHIỆP VÀ CHÍNH QUYỀN</h4>
+                                            <h4 class="title">{{$post->title}}</h4>
                                         </a>
                                         <div class="meta mb10">
-                                            <span><i class="fa fa-clock-o" aria-hidden="true"></i> 11/10/2024</span>
+                                            <span><i class="fa fa-clock-o" aria-hidden="true"></i> {{$post->created_at}}</span>
                                                 <i class="fa fa-list-alt" aria-hidden="true"></i>
                                             <a href=""></a>
                                         </div>
@@ -70,91 +38,14 @@
                                             </p>
                                         </div>
                                         <div class="readmore"><a class="button transparent-primary"
-                                                href="https://hoidoanhnghiepquan1.com/hoi_doanh_nghiep_quan_1_tang_cuong_vai_tro_cau_noi_giua_doanh_nghiep_va_chinh_quyen.html">View
+                                                href="{{ config('app.url') . '/client/post/' . ($post->category->slug??"null") . '/' . $post->slug }}">View
                                                 more</a></div>
                                     </div>
                                 </div>
                             </div>
-                            :
-                            <div id="post-31681"
-                                class="post-item post-31681 post type-post status-publish format-standard has-post-thumbnail hentry category-tin-tuc category-goc-bao-chi">
-                                <div class="row align-items-center">
-                                    <div class="col-md-5 col-sm-4 mb30">
-                                        <div class="thumb">
-                                            <a href="https://hoidoanhnghiepquan1.com/hoi_doanh_nghiep_quan_1_dau_tau_ket_noi_va_dong_hanh_cung_doanh_nghiep.html"
-                                                title="HỘI DOANH NGHIỆP QUẬN 1: ĐẦU TÀU KẾT NỐI VÀ ĐỒNG HÀNH CÙNG DOANH NGHIỆP">
-                                                <img width="380" height="250"
-                                                    src="images/z5916278010563_7e9f8b71aee46df221b8b2d7f7ab8c2e_1728615097_8560318202072685.jpg"
-                                                    class="attachment-380x250 size-380x250 wp-post-image"
-                                                    alt="HỘI DOANH NGHIỆP QUẬN 1: ĐẦU TÀU KẾT NỐI VÀ ĐỒNG HÀNH CÙNG DOANH NGHIỆP">
-
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7 col-sm-8 mb30">
-                                        <a href="https://hoidoanhnghiepquan1.com/hoi_doanh_nghiep_quan_1_dau_tau_ket_noi_va_dong_hanh_cung_doanh_nghiep.html"
-                                            title="HỘI DOANH NGHIỆP QUẬN 1: ĐẦU TÀU KẾT NỐI VÀ ĐỒNG HÀNH CÙNG DOANH NGHIỆP">
-                                            <h4 class="title">HỘI DOANH NGHIỆP QUẬN 1: ĐẦU TÀU KẾT NỐI VÀ ĐỒNG HÀNH CÙNG
-                                                DOANH NGHIỆP</h4>
-                                        </a>
-                                        <div class="meta mb10">
-                                            <span><i class="fa fa-clock-o" aria-hidden="true"></i> 11/10/2024</span>
-                                                <i class="fa fa-list-alt" aria-hidden="true"></i>
-                                            <a href=""></a>
-                                        </div>
-                                        <div class="excerpt mb15">
-                                            <p>
-
-                                            </p>
-                                        </div>
-                                        <div class="readmore"><a class="button transparent-primary"
-                                                href="https://hoidoanhnghiepquan1.com/hoi_doanh_nghiep_quan_1_dau_tau_ket_noi_va_dong_hanh_cung_doanh_nghiep.html">View
-                                                more</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            :
-                            <div id="post-31681"
-                                class="post-item post-31681 post type-post status-publish format-standard has-post-thumbnail hentry category-tin-tuc category-goc-bao-chi">
-                                <div class="row align-items-center">
-                                    <div class="col-md-5 col-sm-4 mb30">
-                                        <div class="thumb">
-                                            <a href="https://hoidoanhnghiepquan1.com/giai_golf_trai_tim_mua_xuan_noi_vong_tay_chia_se.html"
-                                                title="GIẢI GOLF " trÁi="" tim="" mÙa="" xuÂn"="" -="" nỐi="" vÒng=""
-                                                tay="" chia="" sẺ"="">
-                                                <img width="380" height="250"
-                                                    src="images/11_1728553992_2056567082880321.jpg"
-                                                    class="attachment-380x250 size-380x250 wp-post-image"
-                                                    alt="GIẢI GOLF " trÁi="" tim="" mÙa="" xuÂn"="" -="" nỐi="" vÒng=""
-                                                    tay="" chia="" sẺ"="">
-
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7 col-sm-8 mb30">
-                                        <a href="https://hoidoanhnghiepquan1.com/giai_golf_trai_tim_mua_xuan_noi_vong_tay_chia_se.html"
-                                            title="GIẢI GOLF " trÁi="" tim="" mÙa="" xuÂn"="" -="" nỐi="" vÒng="" tay=""
-                                            chia="" sẺ"="">
-                                            <h4 class="title">GIẢI GOLF "TRÁI TIM MÙA XUÂN" - NỐI VÒNG TAY CHIA SẺ</h4>
-                                        </a>
-                                        <div class="meta mb10">
-                                            <span><i class="fa fa-clock-o" aria-hidden="true"></i> 10/10/2024</span>
-                                                <i class="fa fa-list-alt" aria-hidden="true"></i>
-                                            <a href=""></a>
-                                        </div>
-                                        <div class="excerpt mb15">
-                                            <p>
-                                                Ông Lê Đức Thanh, Chủ tịch UBND Quận 1, TP.HCM, cho biết trong dịp Tết
-                                                Nguyên đán sắp tới, Quận 1 dành 32 tỉ đồng để hỗ trợ cho người nghèo có
-                                                một mùa Xuân ấm no và trọn vẹn. Ảnh: PHƯƠNG MINH
-                                            </p>
-                                        </div>
-                                        <div class="readmore"><a class="button transparent-primary"
-                                                href="https://hoidoanhnghiepquan1.com/giai_golf_trai_tim_mua_xuan_noi_vong_tay_chia_se.html">View
-                                                more</a></div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
+                            @endif
+                            
                         </div>
                     </div>
                     <div id="secondary" class="widget-area col-sm-12 col-md-4" role="complementary">
