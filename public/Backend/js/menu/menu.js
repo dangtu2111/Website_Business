@@ -143,7 +143,9 @@ $(document).ready(function () {
 
         // Nếu không có phần tử con
         if (!menu_item.child) {
-            var link = menu_item.link ? menu_item.link : "";
+            var shortenedLink = menu_item.link ? menu_item.link : "";
+
+            var link = shortenedLink.length > 20 ? shortenedLink.substring(0, 20) + "..." : shortenedLink;
             html +=
                 '<li data-id="' +
                 key +
