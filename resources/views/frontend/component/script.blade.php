@@ -250,6 +250,13 @@
                     $.each(response.menus, function (key, menu) {
                         menuHtml += stringHtml(menu); // Gọi hàm stringHtml để tạo HTML
                     });
+                    menuHtml+=`<li class="menu-item ">
+                                            <a href="{{route('user.parner')}}">Đối tác</a>
+                                        </li>
+
+                                        <li class="menu-item ">
+                                            <a href="{{route('user.contact')}}">Liên hệ</a>
+                                        </li>`;
                     menuHtml += "</ul>";
                     // Thêm HTML vào phần tử có id là 'cwvnNavbar'
                     $("#cwvnNavbar").html(menuHtml);

@@ -38,7 +38,7 @@ class BlogController extends Controller
         $categories = $this->categoryRepository->all();
 
         // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
-        return view('backend.layout.layout', compact('template', 'config', 'categories'));
+        return view('backend.layout.layout', compact('template', 'config'));
     }
     public function category_insert()
     {
