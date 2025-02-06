@@ -1,5 +1,5 @@
 <?php
-  $url_image = $category->cover_image ?? (config('app.url') . '/Frontend/fac8dcafc7346ea0ee5034d36f8734d1/wp-content/uploads/1900/2024/10/11/cover_1728639357_6826272568245068.jpg');
+  $url_image = $category->cover_image ?? (config('app.url') . '/Backend/img/background001.png');
 
 ?>
 <section class="breadcrumbs-section background_bg header-bg"
