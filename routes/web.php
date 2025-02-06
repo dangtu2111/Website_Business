@@ -66,7 +66,7 @@ Route::group(['prefix' => 'admin', 'middleware' => AuthenticateMiddleware::class
 // Route::get('/', function () {
 //     return redirect()->route('user.home');
 // });
-Route::group(['prefix' => 'client'], function () {
+    Route::group(['prefix' => 'client'], function () {
     Route::get('/', [App\Http\Controllers\Frontend\HomeController::class, 'index'])->name('user.home');
     Route::get('/tin-tuc', [App\Http\Controllers\Frontend\NewsController::class, 'index'])->name('user.news');
     Route::get('/su-kien', [App\Http\Controllers\Frontend\EventController::class, 'index'])->name('user.event');
