@@ -43,12 +43,14 @@ class ConfigController extends Controller
         $config['logo'] = $request->logoIcon;
         $config['favicon'] = $request->logoIcon;
 
+
         // Cập nhật danh sách social_network
         $socialNetworks = [];
         foreach ($request->nameSocial as $index => $name) {
             $socialNetworks[$name] = [
                 'link' => $request->linkSocial[$index],
                 'icon' => $request->img_social[$index],
+                'name' => $request->account_name[$index],
             ];
         }
         $config['social_network'] = $socialNetworks;

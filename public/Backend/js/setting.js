@@ -24,6 +24,15 @@ $(document).ready(function () {
                             </div>
                         </div>
                         <div class="galleries-item-des-item">
+                                                                <div class="galleries-item-des-item-right">Tên tài khoản</div>
+                                                                <div class="galleries-item-des-item-left">
+                                                                    <div class="el-input">
+                                                                       
+                                                                        <input type="text" autocomplete="off" value="" name="account_name[]" class="el-input__inner">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                        <div class="galleries-item-des-item">
                             <div class="galleries-item-des-item-right">Liên kết</div>
                             <div class="galleries-item-des-item-left">
                                 <div class="el-input">

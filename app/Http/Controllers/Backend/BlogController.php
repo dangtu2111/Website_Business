@@ -179,6 +179,7 @@ class BlogController extends Controller
 
         // Đọc và giải mã JSON
         $configold = json_decode(file_get_contents($jsonPath), true);
+      
         $config = $configold[$name];
 
         $config['method'] = 'create';
@@ -209,26 +210,26 @@ class BlogController extends Controller
             case 'content':
                 $config['content']['title'] = $request->input('title');
                 $config['content']['img'] = $request->input('cover_image');
-                $config['banner']['content'] = base64_encode($request->input('content'));
+                $config['content']['content'] = base64_encode($request->input('content'));
 
                 break;
             case 'register':
                 $config['register']['title'] = $request->input('title');
                 $config['register']['img'] = $request->input('cover_image');
-                $config['banner']['content'] = base64_encode($request->input('content'));
+                $config['register']['content'] = base64_encode($request->input('content'));
 
                 break;
             case 'news':
                 $config['news']['title'] = $request->input('title');
                 $config['news']['img'] = $request->input('cover_image');
-                $config['banner']['content'] = base64_encode($request->input('content'));
+                $config['news']['content'] = base64_encode($request->input('content'));
 
                 $config['news']['category'] = $request->input('category_id');
                 break;
             case 'why':
                 $config['why']['title'] = $request->input('title');
                 $config['why']['img'] = $request->input('cover_image');
-                $config['banner']['content'] = base64_encode($request->input('content'));
+                $config['why']['content'] = base64_encode($request->input('content'));
 
                 break;
         }

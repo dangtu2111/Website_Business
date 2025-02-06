@@ -106,7 +106,7 @@
                                                             <a href="{{route('admin.category.edit',["id"=>$category->id])}}">{{$category->name }}</a>
                                                             <br>
                                                             <code>
-                                                                <a href="{{config('app.url')}}/client/post/'{{$category->slug}}" target="_blank"> {{config('app.url')}}/client/post/{{$category->slug}}</a>
+                                                                <a href="{{config('app.url')}}/client/post/{{$category->slug}}" target="_blank"> {{config('app.url')}}/client/post/{{$category->slug}}</a>
                                                             </code>
                                                         </td>
                                                         <td><img src="{{$category->cover_image}}" width="100px"></td>

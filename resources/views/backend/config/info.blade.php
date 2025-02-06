@@ -88,11 +88,20 @@
                                                     <div class="galleries-item-des">
                                                         <div class="galleries-item-des-group" style="grid-template-columns: repeat(1, minmax(0px, 1fr));">
                                                             <div class="galleries-item-des-item">
-                                                                <div class="galleries-item-des-item-right">Tên</div>
+                                                                <div class="galleries-item-des-item-right">Tên mạng xã hội</div>
                                                                 <div class="galleries-item-des-item-left">
                                                                     <div class="el-input">
                                                                        
-                                                                        <input type="text" autocomplete="off" value="{{ old('nameSocial',$social['name']?? "false") }}" name="nameSocial[]" class="el-input__inner">
+                                                                        <input type="text" autocomplete="off" value="{{ old('nameSocial',$key?? "false") }}" name="nameSocial[]" class="el-input__inner">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="galleries-item-des-item">
+                                                                <div class="galleries-item-des-item-right">Tên tài khoản</div>
+                                                                <div class="galleries-item-des-item-left">
+                                                                    <div class="el-input">
+                                                                       
+                                                                        <input type="text" autocomplete="off" value="{{ old('account_name',$social['name']?? "account_name") }}" name="account_name[]" class="el-input__inner">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -133,7 +142,6 @@
                                     
                                 </div>
                             </form>
-                            <input type="hidden" id="postAjax" value="https://admin.hoidoanhnghiepquan1.com/config/post/ajax">
                         </div>
                     </div>
                 </div>

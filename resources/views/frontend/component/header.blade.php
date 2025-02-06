@@ -7,7 +7,7 @@
                             <div class="col-6 logo mb30">
                                 <a class="navbar-brand" href="index.html" title="Hội Doanh Nghiệp Quận 1">
                                     <img class="logo"
-                                        src="{{asset('Frontend/fac8dcafc7346ea0ee5034d36f8734d1/2024/10/10/logo_1728534640_0028442816193195.jpg')}}"
+                                        src="{{ config('info.logo')}}"
                                         alt="Hội Doanh Nghiệp Quận 1">
 
                                 </a>

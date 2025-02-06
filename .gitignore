@@ -21,3 +21,6 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+config/info.php
+resources/views/frontend/home/component/banner.blade.php
+resources/views/frontend/home/config.json
