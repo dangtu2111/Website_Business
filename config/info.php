@@ -9,7 +9,7 @@ return array(
   'facebook' => 'https://www.facebook.com/HoiDoanhNghiepQuan1',
   'youtube' => 'https://www.youtube.com/@H%E1%BB%99iDoanhNghi%E1%BB%87pQu%E1%BA%ADn1',
   'ngay_thanh_lap' => '14/02/2006',
-  'register' => 'https://docs.google.com/forms/d/e/1FAIpQLScNqqvAgIemQTmQzZe1qA8OdywommJYwKhi0jywjvSZ8xlyTQ/viewform?embedded=true',
+  'register' => 'https://docs.google.com/forms/d/e/1FAIpQLSdTydaR7x4JpaAja7BXF2dLjrR2chhhlsqjGOV28AcDTng2aQ/viewform?embedded=true',
   'member' => '50',
   'logo' => 'https://hoidoanhnghiepquan1.com/storage/fac8dcafc7346ea0ee5034d36f8734d1/wp-content/uploads/200/2024/10/10/logo_1728534640_0028442816193195.jpg',
   'favicon' => 'https://hoidoanhnghiepquan1.com/storage/fac8dcafc7346ea0ee5034d36f8734d1/wp-content/uploads/200/2024/10/10/logo_1728534640_0028442816193195.jpg',

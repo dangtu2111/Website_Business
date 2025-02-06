@@ -7,7 +7,7 @@
                     <div class="contact-form mb30">
                         <div role="form" class="wpcf7" id="wpcf7-f5-o1" lang="vi" dir="ltr">
                             <div class="screen-reader-response"></div>
-                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScNqqvAgIemQTmQzZe1qA8OdywommJYwKhi0jywjvSZ8xlyTQ/viewform?embedded=true" width="100%" height="2466px" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+                            <iframe src="{{config('info.register')}}" width="100%" height="2466px" frameborder="0" marginheight="0" marginwidth="0"></iframe>
                         </div>
                     </div>
                 </div>
