@@ -46,10 +46,21 @@ class BlogController extends Controller
         $category= $this->categoryRepository->findBySlug($categorySlug);
         $post=$this->postRepository->findBySlug($postSlug);
         $config['title']=$post->title;
+        $posts=$this->postRepository->getAllPaginate();
 
    
 
         // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
-        return view('frontend.layout.layout', compact( 'template','config','category','post'));
+        return view('frontend.layout.layout', compact( 'template','config','category','post','posts'));
     }
+    public function get_posts(){
+        $posts = $this->postRepository->getAllPaginate();
+        
+        return response()->json([
+            'success' => true,
+            'message' => 'Posts retrieved successfully.',
+            'data' => $posts
+        ], 200);  // Mã trạng thái HTTP 200
+    }
+    
 }
