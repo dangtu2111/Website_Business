@@ -91,7 +91,8 @@
                                                                 <div class="galleries-item-des-item-right">Tên</div>
                                                                 <div class="galleries-item-des-item-left">
                                                                     <div class="el-input">
-                                                                        <input type="text" autocomplete="off" value="{{ old('nameSocial',$key?? "false") }}" name="nameSocial[]" class="el-input__inner">
+                                                                       
+                                                                        <input type="text" autocomplete="off" value="{{ old('nameSocial',$social['name']?? "false") }}" name="nameSocial[]" class="el-input__inner">
                                                                     </div>
                                                                 </div>
                                                             </div>

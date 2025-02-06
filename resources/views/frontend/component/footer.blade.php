@@ -248,7 +248,7 @@
                                 <strong>Hotline:</strong> {{config('info.phone')}}<br />
                                 <strong>Website:</strong> {{config('info.website')}}<br />
                                 <strong>Email:</strong> <a
-                                    href="mailto:banthuky@hoidoanhnghiepquan1.com">{{config('info.email')}}</a>
+                                    href="mailto:{{config('info.email')}}">{{config('info.email')}}</a>
                             </p>
                         </div>
                     </div>
