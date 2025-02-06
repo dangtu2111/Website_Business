@@ -351,21 +351,8 @@
                             @endforeach
                             @endif
                         </aside>
-                        <aside class="widget">
-                            <h2 class="ldtl-title">Menu chính</h2>
-                            <div class="widget-content nav-menu">
-                                <div class="menu-menu-chinh-container">
-                                    <ul class="menu">
-                                        <li class="menu-item"><a href="index.html">Trang chủ</a></li>
-                                        <li class="menu-item"><a href="#">Giới thiệu</a></li>
-                                        <li class="menu-item"><a href="#">Tin tức - Sự kiện</a></li>
-                                        <li class="menu-item"><a href="#">Hội viên</a></li>
-                                        <li class="menu-item"><a href="doi-tac.html">Đối tác</a></li>
-                                        <li class="menu-item"><a href="lien-he.html">Liên hệ</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </aside>
+                        @include('frontend/component/subMenu')
+
 
                     </div>
                     <div class="clear"></div>

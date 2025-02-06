@@ -265,7 +265,7 @@
                                 </a>
                             </div>
                         </div>
-                        <p>© 2020 Hội Doanh Nhân Quận 1. All Rights Reserved</p>
+                        <p>© 2025 {{config('info.name')}}. All Rights Reserved</p>
                     </div>
                 </div>
             </div>

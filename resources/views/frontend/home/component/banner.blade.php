@@ -11,6 +11,21 @@
                             alt="" data-bgposition="center top" data-bgfit="cover"
                             data-bgrepeat="no-repeat" />
                     </li>
+                    <li data-transition="random" data-slotamount="7" data-saveperformance="off">
+                        <img src="{{ asset($config['banner']['img']) }}"
+                            alt="" data-bgposition="center top" data-bgfit="cover"
+                            data-bgrepeat="no-repeat" />
+                    </li>
+                    <li data-transition="random" data-slotamount="7" data-saveperformance="off">
+                        <img src="{{ asset($config['banner']['img']) }}"
+                            alt="" data-bgposition="center top" data-bgfit="cover"
+                            data-bgrepeat="no-repeat" />
+                    </li>
+                    <li data-transition="random" data-slotamount="7" data-saveperformance="off">
+                        <img src="{{ asset($config['banner']['img']) }}"
+                            alt="" data-bgposition="center top" data-bgfit="cover"
+                            data-bgrepeat="no-repeat" />
+                    </li>
                 </ul>
                 <div class="tp-bannertimer"></div>
             </div>

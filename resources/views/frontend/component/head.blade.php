@@ -5,7 +5,7 @@
     <meta name="app-url" content="{{ config('app.url') }}">
 
     <title>{{ ($config['title']??($category->name ?? "Đây là một Page")) }}</title>
-    <link rel="shortcut icon" href="{{ asset('Frontend/fac8dcafc7346ea0ee5034d36f8734d1/wp-content/uploads/100/2024/10/10/logo_1728534640_0028442816193195.jpg') }}" />
+    <link rel="shortcut icon" href="{{ config('info.logo')}}" />
 
 <link href="{{ asset('Frontend/css/fontawesome/css/all.min.css') }}" rel="stylesheet" defer>
 <link rel="stylesheet" href="{{ asset('Frontend/plugins/bootstrap/css/bootstrap.min9ed2.css?v=1736487372') }}" />
