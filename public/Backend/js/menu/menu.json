@@ -33,19 +33,5 @@
                 "link": "http:\/\/127.0.0.1:8000\/client"
             }
         }
-    },
-    "\u0110\u1ed1i-t\u00e1c142": {
-        "name": "\u0110\u1ed1i t\u00e1c",
-        "link": "http:\/\/127.0.0.1:8000\/client",
-        "child": {
-            "Li\u00ean-h\u1ec7825": {
-                "name": "Li\u00ean h\u1ec7",
-                "link": "http:\/\/127.0.0.1:8000\/client"
-            }
-        }
-    },
-    "Li\u00ean-h\u1ec7825": {
-        "name": "Li\u00ean h\u1ec7",
-        "link": "http:\/\/127.0.0.1:8000\/client"
     }
 }

@@ -61,12 +61,11 @@ Route::group(['prefix' => 'admin', 'middleware' => AuthenticateMiddleware::class
     Route::get('menu/delete/{id}', [MenuController::class, 'menu_delete'])->name('admin.deleteMenu');
     Route::get('/messager', [MessagerController::class, 'index'])->name('admin.messager');
     Route::get('/get-chat-messages/{chatId}', [MessagerController::class, 'getMessages']);
-
 });
 // Route::get('/', function () {
 //     return redirect()->route('user.home');
 // });
-    Route::group(['prefix' => 'client'], function () {
+Route::group(['prefix' => 'client'], function () {
     Route::get('/', [App\Http\Controllers\Frontend\HomeController::class, 'index'])->name('user.home');
     Route::get('/tin-tuc', [App\Http\Controllers\Frontend\NewsController::class, 'index'])->name('user.news');
     Route::get('/su-kien', [App\Http\Controllers\Frontend\EventController::class, 'index'])->name('user.event');
@@ -78,19 +77,18 @@ Route::group(['prefix' => 'admin', 'middleware' => AuthenticateMiddleware::class
     Route::get('/post/{category}/{post}', [App\Http\Controllers\Frontend\BlogController::class, 'post'])->name('user.post');
     Route::get('post/{slug}', [App\Http\Controllers\Frontend\BlogController::class, 'category'])->name('user.category');
     Route::get('menu/get-menu', [MenuController::class, 'getMenu'])->name('user.getMenu');
-
-
+    Route::get('posts/get-posts', [App\Http\Controllers\Frontend\BlogController::class, 'get_posts'])->name('user.get_posts');
 });
 Route::get('/', function () {
     return view('showNotification');
 });
 
-Route::get('getPusher', function (){
-   return view('form_pusher');
+Route::get('getPusher', function () {
+    return view('form_pusher');
 });
 
-Route::get('/pusher', function(Illuminate\Http\Request $request) {
-   
+Route::get('/pusher', function (Illuminate\Http\Request $request) {
+
     event(new App\Events\HelloPusherEvent($request));
     return redirect('getPusher');
 });
