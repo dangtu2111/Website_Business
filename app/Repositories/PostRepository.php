@@ -19,7 +19,7 @@ class PostRepository extends BaseRepository implements PostRepositoryInterface
 
 
     public function getAllPaginate(){
-        $users = $this->model->paginate(10);
+        $users = $this->model->paginate(6);
         return $users;
     }
     public function findBySlug($slug){
