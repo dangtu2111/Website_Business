@@ -12,10 +12,11 @@
         <div class="page_title text-center">
           <h1 class="ldtl-page-title">{{ ($config['title']??($category->name ?? "Đây là một Page")) }}</h1>
           <ul class="breadcrumb justify-content-center" style="color:white">
+            
+            @if(isset($category))
             <li class="breadcrumb-item">
               <a href="index.html">Trang chủ</a>
             </li>
-            @if(isset($category))
             @foreach(explode('/', $category->slug) as $word)
             <li class="breadcrumb-item">
               <a href="{{ $word }}.html">{{ $word }}</a>
