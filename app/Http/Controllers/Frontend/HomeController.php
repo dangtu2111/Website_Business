@@ -16,6 +16,7 @@ class HomeController extends Controller
     }
     public function index(){
         $jsonPath = resource_path('views/frontend/home/config.json');
+        
     
         // Đọc và giải mã JSON
         $config = json_decode(file_get_contents($jsonPath), true);
@@ -39,6 +40,12 @@ class HomeController extends Controller
     }
     public function parner(){
         $template = 'frontend.parner.index';
+        $jsonPath = resource_path('views/frontend/home/config.json');
+
+        // Đọc và giải mã JSON
+        $configold = json_decode(file_get_contents($jsonPath), true);
+      
+        $config = $configold['parner'];
         $config['method']='create';
         // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
         return view('frontend.layout.layout', compact( 'template','config'));

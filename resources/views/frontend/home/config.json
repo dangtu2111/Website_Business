@@ -11,6 +11,20 @@
         "content": "PGgyPjxmb250IGNvbG9yPSIjMTYzODY1Ij48Yj7DoWRmYXNkZmFzZGZhc2RmYXNkZjwvYj48L2ZvbnQ+PC9oMj4=",
         "title": null
     },
+    "parner": {
+        "name": "banner",
+        "blade": "frontend\/home\/component\/banner",
+        "img": [
+            "http:\/\/127.0.0.1:8000\/storage\/photos\/1\/3_1728615817_0240389113600813.jpg",
+            "http:\/\/127.0.0.1:8000\/storage\/photos\/1\/3_1728615817_0240389113600813.jpg",
+            "http:\/\/127.0.0.1:8000\/storage\/photos\/1\/9_1728615879_1349773080915234.jpg",
+            "http:\/\/127.0.0.1:8000\/storage\/photos\/1\/9_1728615879_1349773080915234.jpg",
+            "http:\/\/127.0.0.1:8000\/storage\/photos\/1\/3_1728615817_0240389113600813.jpg",
+            "http:\/\/127.0.0.1:8000\/storage\/photos\/1\/3_1728615817_0240389113600813.jpg"
+        ],
+        "content": "PGgyPjxmb250IGNvbG9yPSIjMTYzODY1Ij48Yj7DoWRmYXNkZmFzZGZhc2RmYXNkZjwvYj48L2ZvbnQ+PC9oMj4=",
+        "title": null
+    },
     "content": {
         "blade": "frontend\/home\/component\/content",
         "title": "Ch\u00e0o m\u1eebng \u0111\u1ebfn v\u1edbi <b>H\u1ed8I DOANH NH\u00c2N QU\u1eacN 5<\/b>",

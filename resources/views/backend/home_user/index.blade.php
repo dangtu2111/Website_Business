@@ -246,6 +246,39 @@
                                                     <tr role="row" class="even">
                                                         <td>1</td>
                                                         <td>
+                                                            <a href="{{route('admin.post.home_user_edit',['name'=>'parner'])}}">
+                                                               Parner
+                                                            </a> <br>
+                                                            
+
+                                                               
+                                                        </td>
+                                                        <td class="text-center"><a href="https://admin.hoidoanhnghiepquan1.com/post/detail?id=f4c2563a-c254-4bb7-9111-72f2d68e9b45&amp;language=en">EN</a></td>
+                                                        <td><input type="text" name="sorted[f4c2563a-c254-4bb7-9111-72f2d68e9b45]" value="0" style="width: 70px;"></td>
+                                                        <td>
+                                                            <div role="switch" aria-checked="true"
+                                                                class="el-switch is-checked">
+                                                                <input
+                                                                    type="hidden" name="status" value="{{ old('status',$post->status ?? "false") }}" true-value="1"
+                                                                    false-value="0"
+                                                                    class="status el-switch__input"><span
+                                                                    class="el-switch__label el-switch__label--left"><!----><span
+                                                                        aria-hidden="true">Tắt</span></span><span
+                                                                    class="el-switch__core"
+                                                                    style="width: 40px;"></span><span
+                                                                    class="el-switch__label el-switch__label--right is-active"><!----><span>Bật</span></span>
+                                                            </div>
+                                                            
+                                                        </td>
+                                                        
+                                                        <td class="text-center">
+                                                            <button type="button" data-category-id="#" data-category-name="#" class="openModalBtn el-button el-button--danger is-circle"><!----><i class="el-icon-delete"></i><!----></button>
+                                                            <button type="button" data-category-id="#" data-category-name="#" class="openModalBtn el-button  is-circle" style="background:#50e98e"><!----><!----><svg xmlns="http://www.w3.org/2000/svg" style="    width: 14px;fill:#fff" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M384 336l-192 0c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l140.1 0L400 115.9 400 320c0 8.8-7.2 16-16 16zM192 384l192 0c35.3 0 64-28.7 64-64l0-204.1c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1L192 0c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-32-48 0 0 32c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l32 0 0-48-32 0z"/></svg></button><!---->
+                                                        </td>
+                                                    </tr>
+                                                    <tr role="row" class="even">
+                                                        <td>1</td>
+                                                        <td>
                                                             <a href="{{route('admin.post.home_user_edit',['name'=>'register'])}}">
                                                                Register
                                                             </a> <br>
