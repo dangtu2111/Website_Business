@@ -61,7 +61,8 @@
                                                 </div>
                                                
                                                 @endforeach
-                                                <div style="    display: flex">
+                                            @else
+                                            <div style="    display: flex">
                                                     <div class="box-img-upload box-avatar" style="width: 100%;">
                                                         <div style="height: 100%;" class="preview-img">
                                                             <img src="{{ asset($img) }}" style="height: 100%;">
