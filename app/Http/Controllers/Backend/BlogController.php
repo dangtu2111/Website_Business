@@ -186,8 +186,10 @@ class BlogController extends Controller
 
         $config['js'] = [
             'Backend/js/category/insert.js',
+            'Backend/js/banner/main.js',
             'Backend/summernote/summernote-lite.min.js'
         ];
+
         
         // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
         return view('backend.layout.layout', compact('template', 'config', 'name'));
@@ -202,7 +204,8 @@ class BlogController extends Controller
 
         switch ($request->input('name')) {
             case 'banner':
-                $config['banner']['img'] = $request->input('cover_image');
+                $config['banner']['img'] = $request->input('cover_image', []); 
+        
                 $config['banner']['title'] = $request->input('title');
                 $config['banner']['content'] = base64_encode($request->input('content'));
 
