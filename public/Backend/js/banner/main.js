@@ -43,6 +43,7 @@
 
                 // Thêm phần tử mới vào list-img sau khi chọn ảnh
                 listIMG.append(`
+                    <div style="    display: flex">
                     <div class="box-img-upload box-avatar" style="width: 100%;">
                         <div style="height: 100%;" class="preview-img">
                             <img src="" style="height: 100%;">
@@ -54,6 +55,8 @@
                             </span>
                         </a>
                     </div>
+                     <button type="button" style="    background: transparent;border: none;color: red;font-size: 20px;" data-category-id="#" data-category-name="#" class="remove-img el-button el-button--danger is-circle"><!----><i class="el-icon-delete"></i><!----></button>
+                                                </div>
                 `);
 
                 // Gắn lại sự kiện cho các phần tử mới được thêm vào
