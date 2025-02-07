@@ -61,6 +61,20 @@
                                                 </div>
                                                
                                                 @endforeach
+                                                <div style="    display: flex">
+                                                    <div class="box-img-upload box-avatar" style="width: 100%;">
+                                                        <div style="height: 100%;" class="preview-img">
+                                                            <img src="{{ asset($img) }}" style="height: 100%;">
+                                                        </div>
+                                                        <input class="input-item form-control" value="{{ $img }}" type="hidden" name="cover_image[]">
+                                                        <a data-input="thumbnail" data-preview="holder" class="img-item upload-file el-link el-link--default">
+                                                            <span class="el-link--inner">
+                                                                <span class="material-icons">upload_file</span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <button type="button" style="    background: transparent;border: none;color: red;font-size: 20px;" data-category-id="#" data-category-name="#" class="remove-img el-button el-button--danger is-circle"><!----><i class="el-icon-delete"></i><!----></button>
+                                                </div>
                                             @endif
 
                                                 
