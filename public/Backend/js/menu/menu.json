@@ -1,27 +1,27 @@
 {
     "concon": {
         "name": "Trang ch\u1ee7",
-        "link": "http:\/\/127.0.0.1:8000\/client"
+        "link": "http:\/\/18.215.177.37\/client"
     },
     "about": {
         "name": "Gi\u1edbi thi\u1ec7u",
         "child": {
             "H\u1ed9i-Doanh-Nghi\u1ec7p-Qu\u1eadn-1": {
                 "name": "H\u1ed9i Doanh Nghi\u1ec7p Qu\u1eadn 1",
-                "link": "http:\/\/127.0.0.1:8000\/client"
+                "link": "http:\/\/18.215.177.37\/client\/post\/blog\/hoi_doanh_nghiep_quan_1_dau_tau_ket_noi_va_dong_hanh_cung_doanh_nghiep"
             }
         }
     },
     "Tin-t\u1ee9c-s\u1ef1-ki\u1ec7n657": {
-        "name": "Tin t\u1ee9c s\u1ef1 ki\u1ec7n",
+        "name": "Tin t\u1ee9c - S\u1ef1 ki\u1ec7n",
         "child": {
             "Tin-t\u1ee9c129": {
                 "name": "Tin t\u1ee9c",
-                "link": "http:\/\/127.0.0.1:8000\/client"
+                "link": "http:\/\/18.215.177.37\/client\/post\/tin-tuc"
             },
             "S\u1ef1-ki\u1ec7n923": {
                 "name": "S\u1ef1 ki\u1ec7n",
-                "link": "http:\/\/127.0.0.1:8000\/client"
+                "link": "http:\/\/18.215.177.37\/client\/post\/su-kien"
             }
         }
     },
@@ -30,7 +30,7 @@
         "child": {
             "\u0110\u0103ng-k\u00ed-h\u1ed9i-vi\u00ean419": {
                 "name": "\u0110\u0103ng k\u00ed h\u1ed9i vi\u00ean",
-                "link": "http:\/\/127.0.0.1:8000\/client"
+                "link": "http:\/\/18.215.177.37\/client\/dang-ki-hoi-vien"
             }
         }
     }

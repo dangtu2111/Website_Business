@@ -40,7 +40,7 @@
 
                                     <div class="el-form-item"><label class="el-form-item__label">Ảnh bìa</label>
                                         <div class="el-form-item__content">
-                                            @if(Request::url() == url('admin/home_user/edit/banner'))
+                                            @if(Request::url() == url('admin/home_user/edit/banner')||Request::url() == url('admin/home_user/edit/parner'))
                                                 
                                             <div id="list-img">
                                             @if(!empty($config['img']))

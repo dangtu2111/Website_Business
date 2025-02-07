@@ -210,6 +210,12 @@ class BlogController extends Controller
                 $config['banner']['content'] = base64_encode($request->input('content'));
 
                 break;
+            case 'parner':
+                $config['parner']['img'] = $request->input('cover_image', []); 
+                $config['parner']['title'] = $request->input('title');
+                $config['parner']['content'] = base64_encode($request->input('content'));
+
+                break;
             case 'content':
                 $config['content']['title'] = $request->input('title');
                 $config['content']['img'] = $request->input('cover_image');

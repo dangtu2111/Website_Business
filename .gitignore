@@ -24,3 +24,4 @@ yarn-error.log
 config/info.php
 resources/views/frontend/home/component/banner.blade.php
 resources/views/frontend/home/config.json
+resources/views/frontend/home/config.json

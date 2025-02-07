@@ -11,8 +11,8 @@ return array (
   'ngay_thanh_lap' => '14/02/2006',
   'register' => 'https://docs.google.com/forms/d/e/1FAIpQLSdTydaR7x4JpaAja7BXF2dLjrR2chhhlsqjGOV28AcDTng2aQ/viewform?embedded=true',
   'member' => '50',
-  'logo' => 'http://127.0.0.1:8000/storage/photos/1/width_200 (1).png',
-  'favicon' => 'http://127.0.0.1:8000/storage/photos/1/width_200 (1).png',
+  'logo' => 'http://18.215.177.37/storage/photos/1/width_200 (1).png',
+  'favicon' => 'http://18.215.177.37/storage/photos/1/width_200 (1).png',
   'social_network' => 
   array (
     'facebook' => 
