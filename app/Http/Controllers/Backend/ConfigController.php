@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Config;
+
 class ConfigController extends Controller
 {
     public function config_info(){
@@ -42,6 +43,9 @@ class ConfigController extends Controller
         $config['register'] = $request->register;
         $config['logo'] = $request->logoIcon;
         $config['favicon'] = $request->logoIcon;
+        $config['ngay_thanh_lap'] = $request->ngay_thanh_lap;
+        $config['member'] = $request->member;
+
 
 
         // Cập nhật danh sách social_network
@@ -65,9 +69,11 @@ class ConfigController extends Controller
         $template = 'backend.config.info';
 // Xóa bộ nhớ đệm cấu hình và reload lại config
         Config::set('info', include $path);
+        Artisan::call('config:clear');
 
 
-        return view('backend.layout.layout', compact( 'template','config'));
+        return redirect()->route('admin.config');
+
 
     }
    

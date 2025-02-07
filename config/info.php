@@ -8,9 +8,9 @@ return array (
   'website' => 'hoidoanhnghiepquan1.com',
   'facebook' => 'https://www.facebook.com/HoiDoanhNghiepQuan1',
   'youtube' => 'https://www.youtube.com/@H%E1%BB%99iDoanhNghi%E1%BB%87pQu%E1%BA%ADn1',
-  'ngay_thanh_lap' => '14/02/2006',
+  'ngay_thanh_lap' => '2015-09-09',
   'register' => 'https://docs.google.com/forms/d/e/1FAIpQLSdTydaR7x4JpaAja7BXF2dLjrR2chhhlsqjGOV28AcDTng2aQ/viewform?embedded=true',
-  'member' => '50',
+  'member' => '56',
   'logo' => 'http://127.0.0.1:8000/storage/photos/1/width_200 (1).png',
   'favicon' => 'http://127.0.0.1:8000/storage/photos/1/width_200 (1).png',
   'social_network' => 
@@ -28,4 +28,6 @@ return array (
       'name' => 'Hoi doanh nghiep',
     ),
   ),
+  'createDate' => '2015-09-09',
+  'numberMembers' => '50',
 );
