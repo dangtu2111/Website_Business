@@ -12,16 +12,20 @@
 
                                 <div id="page">
                                     <div class="row">@CSRF
-                                        <div class="col-md-12"><label for="settingsInputEmail" class="form-label">Công ty</label> <input type="text" class="form-control" name="name" value="{{ old('status',config('info.name')?? "false") }}"></div>
+                                        <div class="col-md-12"><label for="settingsInputEmail" class="form-label">Công ty</label> <input type="text" class="form-control" name="name" value="{{ old('status',config('info.name')?? "") }}"></div>
                                         <!-- <div class="col-md-6"><label for="settingsPhoneNumber" class="form-label">Số điện thoại</label> <input type="text" class="form-control"></div> -->
                                     </div>
                                     <div class="row m-t-lg">
-                                        <div class="col-md-6"><label for="settingsInputFirstName" class="form-label">Hotline</label> <input type="text" class="form-control" name="phone" value="{{ old('phone',config('info.phone')?? "false") }}"></div>
-                                        <div class="col-md-6"><label for="settingsInputLastName" class="form-label">Email</label> <input type="text" class="form-control" name="email" value="{{ old('email',config('info.email')?? "false") }}"></div>
+                                        <div class="col-md-6"><label for="settingsInputFirstName" class="form-label">Hotline</label> <input type="text" class="form-control" name="phone" value="{{ old('phone',config('info.phone')?? "") }}"></div>
+                                        <div class="col-md-6"><label for="settingsInputLastName" class="form-label">Email</label> <input type="text" class="form-control" name="email" value="{{ old('email',config('info.email')?? "") }}"></div>
                                     </div>
                                     <div class="row m-t-lg">
-                                        <div class="col-md-6"><label for="settingsInputFirstName" class="form-label">Website</label> <input type="text" class="form-control" name="website" value="{{ old('website',config('info.website')?? "false") }}"></div>
-                                        <div class="col-md-6"><label for="settingsInputFirstName" class="form-label">Địa chỉ</label> <input type="text" class="form-control" name="address" value="{{ old('address',config('info.address')?? "false") }}"></div>
+                                        <div class="col-md-6"><label for="settingsInputFirstName" class="form-label">Website</label> <input type="text" class="form-control" name="website" value="{{ old('website',config('info.website')?? "") }}"></div>
+                                        <div class="col-md-6"><label for="settingsInputFirstName" class="form-label">Địa chỉ</label> <input type="text" class="form-control" name="address" value="{{ old('address',config('info.address')?? "") }}"></div>
+                                    </div>
+                                    <div class="row m-t-lg">
+                                        <div class="col-md-6"><label for="settingsInputFirstName" class="form-label">Ngày thành lập</label> <input type="date" class="form-control" name="ngay_thanh_lap" value="{{ old('ngay_thanh_lap',config('info.ngay_thanh_lap')?? "") }}"></div>
+                                        <div class="col-md-6"><label for="settingsInputFirstName" class="form-label">Số lượng thành viên </label> <input type="text" class="form-control" name="member" value="{{ old('member',config('info.member')?? "") }}"></div>
                                     </div>
                                     <div class="row m-t-lg">
                                         <!-- <div class="col-md-6"><label for="settingsInputFirstName" class="form-label">Facebook</label> <input type="text" class="form-control" name="facebook" value="{{ old('facebook',config('info.facebook')?? "false") }}"></div> -->

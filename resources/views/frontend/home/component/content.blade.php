@@ -21,7 +21,8 @@
                                                 <div class="featured-number-item text-center mb60">
                                                     <div class="number d-flex justify-content-center">
                                                         <div class="number">
-                                                           {{config('info.ngay_thanh_lap')}}
+                                                        {{ \Carbon\Carbon::parse(config('info.ngay_thanh_lap'))->format('d/m/Y') }}
+
                                                         </div>
                                                     </div>
                                                     <hr />
