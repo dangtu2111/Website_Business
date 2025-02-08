@@ -13,7 +13,7 @@
                                 <li class="nav-item hidden-on-mobile">
                                     <div id="translate_select"></div>
                                 </li>
-                                <li class="nav-item hidden-on-mobile">
+                                <!-- <li class="nav-item hidden-on-mobile">
                                     <a class="nav-link language-dropdown-toggle" href="#" id="languageDropDown" data-bs-toggle="dropdown">
 
                                         VI
@@ -95,7 +95,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>

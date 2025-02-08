@@ -11,6 +11,11 @@
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+    @media screen and (max-width: 600px) {
+        .chat-container {
+            right: 0px;
+        }
+    }
 
     .chat-header {
         display: flex;
@@ -213,14 +218,14 @@
     </div>
 </div>
 <div id="chat-contact-vr" class="button-contact-vr" style="
-    right: 228px;    bottom: 25px;
+    right: 220px;    bottom: 25px;
 ">
     <div id="chat-online">
         <div class="phone-vr phone-dk">
             <button class="btn btn-primary m57-form-btn-show" style="     padding: 2px;
     height: auto;
     border-radius: 50px;    background: #9ad9e9c9;
-    border: 0;">
+    border: 0;    margin-bottom: 5px;">
                 <img src="{{asset('Frontend/images/chat_icon.png')}}" width="50" alt="">
             </button>
         </div>
