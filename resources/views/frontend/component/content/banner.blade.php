@@ -19,7 +19,7 @@
             </li>
             @foreach(explode('/', $category->slug) as $word)
             <li class="breadcrumb-item">
-              <a href="{{ $word }}.html">{{ $word }}</a>
+              <a href="{{ config('app.url').'/client/post/'.$word }}">{{ $word }}</a>
             </li>
             @endforeach
             @endif
