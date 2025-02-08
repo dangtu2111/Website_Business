@@ -24,7 +24,7 @@ return array (
     'youtube' => 
     array (
       'link' => 'https://www.youtube.com/@H%E1%BB%99iDoanhNghi%E1%BB%87pQu%E1%BA%ADn1',
-      'icon' => 'http://127.0.0.1:8000/storage/photos/1/facebook.png',
+      'icon' => 'http://127.0.0.1:8000/storage/photos/1/yt_1728630483_3630600216823441.jpg',
       'name' => 'Hoi doanh nghiep',
     ),
   ),

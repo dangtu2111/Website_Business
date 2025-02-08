@@ -52,11 +52,11 @@
                                             @if(isset($users))
                                                 @foreach($users as $user)
                                                 <tr id="item0" class="item mini">
-                                                    <td><a href="/account/admin/edit/ab3432d7-d225-4b67-a3db-62c5b6165421" class="bold text-primary"><span>info</span></a></td>
-                                                    <td><span>info</span></td>
-                                                    <td><span></span></td>
-                                                    <td><span>info@hoidoanhnghiepquan1.com</span></td>
-                                                    <td><a href="/account/admin/permission/ab3432d7-d225-4b67-a3db-62c5b6165421">Phân quyền</a></td>
+                                                    <td><a href="" class="bold text-primary"><span>{{$user->username}}</span></a></td>
+                                                    <td><span>{{$user->fullname}}</span></td>
+                                                    <td><span>{{$user->phone_number}}</span></td>
+                                                    <td><span>{{$user->email}}</span></td>
+                                                    <!-- <td><a href="">Phân quyền</a></td> -->
                                                 </tr>
                                                 @endforeach
                                             @endif
