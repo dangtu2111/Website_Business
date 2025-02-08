@@ -11,10 +11,18 @@
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+    #chat-contact-vr{
+        right: 220px;
+        bottom: 25px;
+    }
     @media screen and (max-width: 600px) {
         .chat-container {
             right: 0px;
         }
+        #chat-contact-vr{
+        right: 220px;
+        bottom: 12px;
+    }
     }
 
     .chat-header {
@@ -217,9 +225,7 @@
         </button>
     </div>
 </div>
-<div id="chat-contact-vr" class="button-contact-vr" style="
-    right: 220px;    bottom: 25px;
-">
+<div id="chat-contact-vr" class="button-contact-vr" >
     <div id="chat-online">
         <div class="phone-vr phone-dk">
             <button class="btn btn-primary m57-form-btn-show" style="     padding: 2px;
