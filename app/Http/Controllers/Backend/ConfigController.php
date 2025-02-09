@@ -16,7 +16,6 @@ class ConfigController extends Controller
             'Backend/js/setting.js',
         ];
         $config['method']='create';
-        
         // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
         return view('backend.layout.layout', compact( 'template','config'));
     }
@@ -66,12 +65,9 @@ class ConfigController extends Controller
             'Backend/js/setting.js',
         ];
         $config['method']='create';
-        $template = 'backend.config.info';
 // Xóa bộ nhớ đệm cấu hình và reload lại config
         Config::set('info', include $path);
         Artisan::call('config:clear');
-
-
         return redirect()->route('admin.config');
 
 

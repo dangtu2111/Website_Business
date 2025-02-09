@@ -31,6 +31,10 @@ class Category extends Model
         'sort_order',
         'status',
         'require_login',
+        'title_news', 
+        'category_news', 
+        'title_bottom', 
+        'category_bottom'
     ];
 
     /**

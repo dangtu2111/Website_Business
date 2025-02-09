@@ -1,6 +1,6 @@
 <div class="latest-posts">
     <div class="title">
-        <h2 class="ldtl-title">Related Posts</h2>
+        <h2 class="ldtl-title">{{$category->title_bottom}}</h2>
     </div>
     <div class="row" id="posts-list">
         <!-- Dữ liệu bài viết sẽ được hiển thị tại đây -->
@@ -13,7 +13,7 @@
     // Gọi API khi tải trang
     $(document).ready(function() {
         $.ajax({
-            url: "{{ route('user.get_posts') }}", // URL API
+            url: "{{ route('user.get_posts', ['category' => $category->category_bottom]) }}", // URL API
             type: "GET", // Phương thức GET
             success: function(response) {
                 var postsList = $('#posts-list'); // Sử dụng selector chính xác để thêm bài viết vào đúng vị trí

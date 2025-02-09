@@ -27,7 +27,7 @@
     <div id="pageLogin" class="app app-auth-sign-in align-content-stretch d-flex flex-wrap justify-content-end">
         <div class="app-auth-background"></div>
         <div class="app-auth-container">
-            <div class="logo"><a href="">HỘI DOANH NGHIỆP QUẬN 1</a></div>
+            <div class="logo"><a href="">CLB DOANH NHÂN TRÀ VINH TẠI TP.HCM</a></div>
             <div class="auth-credentials m-b-xxl">
                 @if ($errors->any())
                 <div class="alert alert-danger" style="background:transparent;margin-bottom: 0;">

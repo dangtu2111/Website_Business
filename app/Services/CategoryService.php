@@ -54,6 +54,10 @@ class CategoryService implements CategoryServiceInterface
                 'sort_order'=>$payload['sort_order']??0,
                 'status'=>$payload['status']==1?true:false,
                 'require_login'=>$payload['require_login']==1?true:false,
+                'title_news'     => $payload['title_news'] ?? null,
+                'category_news'  => $payload['category_news'] ?? null,
+                'title_bottom'   => $payload['title_bottom'] ?? null,
+                'category_bottom'=> $payload['category_bottom'] ?? null,
             ];
 
             $category = $this->categoryRepository->create($categoryArr);
@@ -77,10 +81,17 @@ class CategoryService implements CategoryServiceInterface
         try {
             // Loại bỏ các yếu tố không cần thiết trong request
             $payload = $request->except(['_token', 'send']);
-           
+          
+           // Lấy thông tin danh mục hiện tại từ repository
+            $currentCategory = $this->categoryRepository->findById($id);
+          
+            // Nếu tồn tại trường slug và slug mới trùng với slug cũ, loại bỏ nó khỏi payload
+            if (isset($payload['slug']) && $payload['slug'] === $currentCategory->slug) {
+                unset($payload['slug']);
+            }
             $categoryArr=[
                 'name'=>$payload['name'],
-                'slug'=>$payload['slug'],
+                
                 'iframe'=>$payload['iframe'],
                 'icon'=>$payload['']??null,
                 'cover_image'=>$payload['cover_image']??null,
@@ -88,10 +99,20 @@ class CategoryService implements CategoryServiceInterface
                 'sort_order'=>$payload['sort_order']??0,
                 'status'=>$payload['status']==1?true:false,
                 'require_login'=>$payload['require_login']==1?true:false,
+                'title_news'     => $payload['title_news'] ?? null,
+                'category_news'  => $payload['category_news'] ?? null,
+                'title_bottom'   => $payload['title_bottom'] ?? null,
+                'category_bottom'=> $payload['category_bottom'] ?? null,
             ];
+            
+            // Nếu slug còn tồn tại trong payload (nghĩa là slug mới khác slug cũ), thêm vào mảng cập nhật
+            if (isset($payload['slug'])) {
+                $categoryArr['slug'] = $payload['slug'];
+            }
+            
 
             $category = $this->categoryRepository->update($id,$categoryArr);
-      
+           
             DB::commit();
             return true;
         } catch (\Exception $e) {

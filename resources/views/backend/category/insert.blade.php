@@ -23,21 +23,22 @@
                             <div id="page">
                                 <form class="el-form form-cs pt-0" action="{{route('admin.category.post')}}" method="POST">
                                     @CSRF
+                                    {!! $config['method'] == "update" ? '<input type="hidden" name="id" value="' . $category->id . '">' : '' !!}
                                     <div class="el-form-item"><label class="el-form-item__label">Tên</label>
                                         <div class="el-form-item__content"><input type="text" name='name'
-                                        value="{{ old('name',($category->name) ?? "") }}"        
-                                        class="form-control"> <i
+                                                value="{{ old('name',($category->name) ?? "") }}"
+                                                class="form-control"> <i
                                                 class="el-form-item__error errors__name"></i><!----></div>
                                     </div>
                                     <div class="el-form-item"><label class="el-form-item__label">Đường dẫn</label>
                                         <div class="el-form-item__content"><input type="text" name='slug'
-                                        value="{{ old('slug',($category->slug) ?? "") }}"  
+                                                value="{{ old('slug',($category->slug) ?? "") }}"
                                                 class="form-control"> <i
                                                 class="el-form-item__error errors__slug"></i><!----></div>
                                     </div>
                                     <div class="el-form-item"><label class="el-form-item__label">Iframe</label>
                                         <div class="el-form-item__content"><input type="text" name='iframe'
-                                        value="{{ old('iframe',($category->iframe) ?? "") }}"
+                                                value="{{ old('iframe',($category->iframe) ?? "") }}"
                                                 class="form-control"> <i
                                                 class="el-form-item__error errors__iframe"></i><!----></div>
                                     </div>
@@ -87,27 +88,149 @@
                                                                 class="el-form-item__error errors__sorted"></i><!---->
                                                         </div>
                                                     </div>
-                                                    <div class="el-form-item"><label class="el-form-item__label">Trạng
-                                                            thái</label>
-                                                        <div class="el-form-item__content">
-                                                            <div role="switch" aria-checked="true"
-                                                                class="el-switch is-checked"><input
-                                                                    type="hidden"
-                                                                    true-value="1"  value="{{ old('status',$category->status??"false") }}" name="status" false-value="2"
-                                                                    class="status el-switch__input"><span
-                                                                    class="el-switch__label el-switch__label--left"><!----><span
-                                                                        aria-hidden="true">Off</span></span><span
-                                                                    class="el-switch__core"
-                                                                    style="width: 40px; border-color: rgb(19, 206, 102); background-color: rgb(19, 206, 102);"></span><span
-                                                                    class="el-switch__label el-switch__label--right is-active"><!----><span>On</span></span>
-                                                            </div><!---->
-                                                        </div>
+                                                    <div class="el-form-item">
+                                                        
+                                                            <label
+                                                                class="control-label col-md-12 col-sm-12 col-xs-12">
+                                                                Vị trí bên trái 
+                                                            </label>
+                                                            <div class="el-form-item">
+                                                                <div class="el-form-item__content"><input type="text" name='title_news'
+                                                                        placeholder="Nhập title cho danh mục"
+                                                                        value="{{ old('title_news',($category->title_news) ?? "") }}"
+                                                                        class="form-control"> <i
+                                                                        class="el-form-item__error errors__slug"></i><!----></div>
+                                                            </div>
+                                                            <div class="el-select"
+                                                                style="width: 100%;">
+
+                                                                <div
+                                                                    class="el-input el-input--suffix">
+                                                                    <input type="hidden" class="category_id" name="category_news" value="{{ old('category_news',$category->category_news ?? "") }}" >
+                                                                    <!----><input type="text"
+                                                                        readonly="readonly"
+                                                                        autocomplete="off"
+                                                                        placeholder="Select"
+
+                                                                        class=" el-input__inner"
+                                                                        style="height: 40px;
+                                                                                    " ><!----><span
+                                                                        class="el-input__suffix"><span
+                                                                            class="el-input__suffix-inner"><i
+                                                                                class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span><!----></span><!----><!---->
+                                                                </div>
+                                                                <div class="el-select-dropdown el-popper is-multiple"
+                                                                    style="display: none; min-width: 150.05px;">
+                                                                    <div class="el-scrollbar"
+                                                                        style="">
+                                                                        <div class="el-select-dropdown__wrap el-scrollbar__wrap"
+                                                                            style="margin-bottom: -17px; margin-right: -17px;">
+                                                                            <ul
+                                                                                class="el-scrollbar__view el-select-dropdown__list">
+                                                                                <!---->
+                                                                                @foreach($categories as $category)
+                                                                                <li
+                                                                                    class="el-select-dropdown__item">
+                                                                                    <span data="{{$category->id}}"> {{ $category->name}}</span>
+                                                                                </li>
+
+                                                                                @endforeach
+
+
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div
+                                                                            class="el-scrollbar__bar is-horizontal">
+                                                                            <div class="el-scrollbar__thumb"
+                                                                                style="transform: translateX(0%);">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="el-scrollbar__bar is-vertical">
+                                                                            <div class="el-scrollbar__thumb"
+                                                                                style="transform: translateY(0%);">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div><!---->
+                                                                </div>
+                                                            </div>
+                                                        
+                                                        
+                                                    </div>
+                                                    <div class="el-form-item">
+                                                        
+                                                            <label
+                                                                class="control-label col-md-12 col-sm-12 col-xs-12">
+                                                                Vị trí dưới
+                                                            </label>
+                                                            <div class="el-form-item">
+                                                                <div class="el-form-item__content"><input type="text" name='title_bottom'
+                                                                        placeholder="Nhập title cho danh mục"
+                                                                        value="{{ old('title_bottom',($category->title_bottom) ?? "") }}"
+                                                                        class="form-control"> <i
+                                                                        class="el-form-item__error errors__slug"></i><!----></div>
+                                                            </div>
+                                                            <div class="el-select"
+                                                                style="width: 100%;">
+
+                                                                <div
+                                                                    class="el-input el-input--suffix">
+                                                                    <input type="hidden" class="category_id" name="category_bottom" value="{{ old('category_bottom',$category->category_bottom ?? "") }}" >
+                                                                    <!----><input type="text"
+                                                                        readonly="readonly"
+                                                                        autocomplete="off"
+                                                                        placeholder="Select"
+
+                                                                        class=" el-input__inner"
+                                                                        style="height: 40px;
+                                                                                    " ><!----><span
+                                                                        class="el-input__suffix"><span
+                                                                            class="el-input__suffix-inner"><i
+                                                                                class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span><!----></span><!----><!---->
+                                                                </div>
+                                                                <div class="el-select-dropdown el-popper is-multiple"
+                                                                    style="display: none; min-width: 150.05px;">
+                                                                    <div class="el-scrollbar"
+                                                                        style="">
+                                                                        <div class="el-select-dropdown__wrap el-scrollbar__wrap"
+                                                                            style="margin-bottom: -17px; margin-right: -17px;">
+                                                                            <ul
+                                                                                class="el-scrollbar__view el-select-dropdown__list">
+                                                                                <!---->
+                                                                                @foreach($categories as $category)
+                                                                                <li
+                                                                                    class="el-select-dropdown__item">
+                                                                                    <span data="{{$category->id}}"> {{ $category->name}}</span>
+                                                                                </li>
+
+                                                                                @endforeach
+
+
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div
+                                                                            class="el-scrollbar__bar is-horizontal">
+                                                                            <div class="el-scrollbar__thumb"
+                                                                                style="transform: translateX(0%);">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="el-scrollbar__bar is-vertical">
+                                                                            <div class="el-scrollbar__thumb"
+                                                                                style="transform: translateY(0%);">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div><!---->
+                                                                </div>
+                                                            </div>
+                                                        
+                                                        
                                                     </div>
                                                     <div class="el-form-item"><label class="el-form-item__label">Yêu cầu
                                                             đăng nhập</label>
                                                         <div class="el-form-item__content">
                                                             <div role="switch" class="el-switch">
-                                                                <input type="hidden" name="require_login"  value="{{ old('require_login',$category->require_login??"false") }}"
+                                                                <input type="hidden" name="require_login" value="{{ old('require_login',$category->require_login??"false") }}"
                                                                     class="status el-switch__input">
                                                                 <span
                                                                     class="el-switch__label el-switch__label--left is-active"><!----><span>Off</span></span><span
@@ -126,7 +249,7 @@
                                     </div>
                                     <input type="hidden" name="type" value="{{$config['method']}}"
                                         class="el-switch__input">
-                                        {!! $config['method'] == "update" ? '<input type="hidden" name="id" value="' . $category->id . '">' : '' !!}
+                                    
 
                                     <div class="cs-tool" style="background: transparent;box-shadow: none;">
                                         <a href="{{route('admin.category')}}" class="btn btn-secondary me-3">
