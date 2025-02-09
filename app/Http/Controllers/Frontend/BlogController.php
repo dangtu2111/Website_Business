@@ -46,15 +46,16 @@ class BlogController extends Controller
         $category= $this->categoryRepository->findBySlug($categorySlug);
         $post=$this->postRepository->findBySlug($postSlug);
         $config['title']=$post->title;
-        $posts=$this->postRepository->getAllPaginate();
+        $posts=$this->postRepository->paginateWhereId($category->category_news,6);
+
 
    
 
         // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
         return view('frontend.layout.layout', compact( 'template','config','category','post','posts'));
     }
-    public function get_posts(){
-        $posts = $this->postRepository->getAllPaginate();
+    public function get_posts($category){
+        $posts = $this->postRepository->paginateWhereId($category,6);
         
         return response()->json([
             'success' => true,

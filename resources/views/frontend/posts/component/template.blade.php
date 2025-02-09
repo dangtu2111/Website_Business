@@ -2,10 +2,11 @@
   <div class="container">
     <div class="row">
       @include('frontend.posts.content.content')
+      @if(isset($category->title_news))
       <div class=" col-sm-12 col-md-4" id="secondary">
 
         <aside class="widget post-list">
-          <h2 class="ldtl-title">Tin mới nhất</h2>
+          <h2 class="ldtl-title">{{$category->title_news}}</h2>
           @if(isset($posts))
           @foreach($posts as $post)
           <div id="post-f4c2563a-c254-4bb7-9111-72f2d68e9b45"
@@ -38,9 +39,14 @@
 
 
       </div>
+      @endif
+      @if(isset($category->title_bottom))
       <div class=" col-sm-12 col-md-8">
         @include('frontend/component/lastest-posts')
       </div>
+      @endif
+      
+      
     </div>
   </div>
 </section>

@@ -77,7 +77,7 @@ Route::group(['prefix' => 'client'], function () {
     Route::get('/post/{category}/{post}', [App\Http\Controllers\Frontend\BlogController::class, 'post'])->name('user.post');
     Route::get('post/{slug}', [App\Http\Controllers\Frontend\BlogController::class, 'category'])->name('user.category');
     Route::get('menu/get-menu', [MenuController::class, 'getMenu'])->name('user.getMenu');
-    Route::get('posts/get-posts', [App\Http\Controllers\Frontend\BlogController::class, 'get_posts'])->name('user.get_posts');
+    Route::get('posts/get-posts/{category}', [App\Http\Controllers\Frontend\BlogController::class, 'get_posts'])->name('user.get_posts');
 });
 Route::get('/', function () {
     return view('showNotification');
