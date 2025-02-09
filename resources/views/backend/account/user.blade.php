@@ -71,7 +71,7 @@
                                             <li class="number active">1</li><!----><!----><!---->
                                         </ul><button type="button" disabled="disabled" class="btn-next"><i class="el-icon el-icon-arrow-right"></i></button>
                                     </div>
-                                </div> <input type="hidden" id="paginationAjax" value="https://admin.hoidoanhnghiepquan1.com/account/pagination/admin/ajax">
+                                </div> 
                             </div>
                         </div>
                     </div>
