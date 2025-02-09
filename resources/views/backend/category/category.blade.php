@@ -125,10 +125,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="hidden" id="postAjax" value="https://admin.hoidoanhnghiepquan1.com/category/search/ajax">
-                            <input type="hidden" id="removePostAjax" value="https://admin.hoidoanhnghiepquan1.com/category/remove/post/ajax">
-                            <input type="hidden" id="sortedAjax" value="https://admin.hoidoanhnghiepquan1.com/category/sorted/ajax">
-                        </div>
+                             </div>
                     </div>
                 </div>
             </div>
