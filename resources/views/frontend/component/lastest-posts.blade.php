@@ -30,7 +30,7 @@
                                         '<img src="' + post.cover_image + '" alt="' + post.title + '">' +
                                     '</div>' +
                                     '<div class="news-info text-center">' +
-                                        `<h5><a href="client/post/${post.category.slug ?? 'null'}/${post.slug}">' + post.title + '</a></h5>` +
+                                        `<h5><a href="client/post/${post.category.slug ?? 'null'}/${post.slug}">` + post.title + `</a></h5>` +
                                     '</div>' +
                                 '</div>' +
                             '</div>'
