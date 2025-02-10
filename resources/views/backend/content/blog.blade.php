@@ -169,6 +169,53 @@
                                                     @endforeach
                                                     @endif
 
+
+                                                    @if(isset($post_null))
+                                                   <!-- Kiểm tra xem category có ít nhất 1 post -->
+                                                    @foreach($post_null as $post)
+                                                    <tr role="row" class="even">
+                                                        <td>{{$post->id}}</td>
+
+                                                        <td>
+                                                            <div style="max-width:70%">
+                                                                <a href="{{route('admin.post.edit',['id'=>$post->id])}}">
+                                                                    {{$post->title}}
+                                                                </a>
+                                                                <br>
+                                                                Lượt xem: 0
+
+                                                                <br>
+                                                                Ngày đăng: {{$post->created_at}}
+                                                                <br>
+                                                                Ngày cập nhật: {{$post->updated_at}}
+                                                                <code><a href="{{ config('app.url') . '/client/post/' . ($post->category->slug??"null") . '/' . $post->slug }}" target="_blank" style="color: rgb(102, 102, 102);">
+                                                                        {{ config('app.url') . '/client/post/' . ($post->category->slug ?? 'null') . '/' . $post->slug }}</a></code>
+                                                            </div>
+
+                                                        </td>
+                                                        <td class="text-center"><a href="https://admin.hoidoanhnghiepquan1.com/post/detail?id=f4c2563a-c254-4bb7-9111-72f2d68e9b45&amp;language=en">EN</a></td>
+                                                        <td><input type="text" name="sorted[f4c2563a-c254-4bb7-9111-72f2d68e9b45]" value="0" style="width: 70px;"></td>
+                                                        <td>
+                                                            <div role="switch" aria-checked="true"
+                                                                class="el-switch is-checked">
+                                                                <input
+                                                                    type="hidden" name="status" value="{{ old('status',$post->status ?? "false") }}" true-value="1"
+                                                                    false-value="0"
+                                                                    class="status el-switch__input"><span
+                                                                    class="el-switch__label el-switch__label--left"><!----><span
+                                                                        aria-hidden="true">Tắt</span></span><span
+                                                                    class="el-switch__core"
+                                                                    style="width: 40px;"></span><span
+                                                                    class="el-switch__label el-switch__label--right is-active"><!----><span>Bật</span></span>
+                                                            </div>
+                                                        </td>
+                                                        <td><button type="button" data-category-id="{{$post->id}}" data-category-name="{{$post->title}}" class="openModalBtn el-button el-button--danger is-circle"><!----><i class="el-icon-delete"></i><!----></button></td>
+                                                        <td class="text-center"><a class="el-link el-link--default"><!----><span class="el-link--inner">Sao chép</span><!----></a></td>
+                                                    </tr>
+                                                    @endforeach
+                                                    
+                                                    @endif
+
                                                 </tbody>
                                             </table> <input type="hidden" name="_token" value="LPulHD1lXmKcYt5ekKdqX0tXQOGR1snYZcpCGhJ6">
                                         </form>

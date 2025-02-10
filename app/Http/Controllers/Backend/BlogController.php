@@ -140,9 +140,11 @@ class BlogController extends Controller
             'Backend/js/insert_blog/main.js',
         ];
         $categories_item = $this->categoryRepository->allWithPost();
+        $post_null=$this->postRepository->PostCategoryNull();
+        
         
         // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
-        return view('backend.layout.layout', compact('template', 'config', 'categories_item'));
+        return view('backend.layout.layout', compact('template', 'config', 'categories_item','post_null'));
     }
     public function home_user()
     {
