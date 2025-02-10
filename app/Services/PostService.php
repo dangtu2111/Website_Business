@@ -114,7 +114,7 @@ class PostService implements PostServiceInterface
         try {
             
             $post = $this->postRepository->delete($id);
-            dd($post);
+  
             DB::commit();
             return true;
         } catch (\Exception $e) {

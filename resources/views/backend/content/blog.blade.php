@@ -1,6 +1,6 @@
 <div class="modal-overlay" id="modal">
     <div class="modal-content" style="padding: 2rem 3rem;width:50%">
-        <form action="{{route('admin.category.post')}}" method="POST">
+        <form action="{{route('admin.blogs.insertPost')}}" method="POST">
             @csrf
             <h3 style="padding-bottom:1rem">Hãy đọc kĩ trước khi thực hiện</h3>
             <input type="text" autocomplete="off" class="name-category el-input__inner" readonly>
