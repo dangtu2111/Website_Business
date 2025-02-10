@@ -89,7 +89,7 @@
                                             }
 
                                             .table.table-striped th:nth-child(2) {
-                                                width: 300px;
+                                                width: auto;
                                             }
 
                                             .table.table-striped th:nth-child(3) {
@@ -112,7 +112,7 @@
                                                 <thead>
                                                     <tr role="row">
                                                         <th width="70px">#</th>
-                                                        <th width="300px">Name</th>
+                                                        <th >Name</th>
                                                         <th width="110px">Ngôn ngữ</th>
                                                         <th width="70px">Sắp xếp</th>
                                                         <th width="110px">Trạng thái</th>
