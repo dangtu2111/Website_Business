@@ -70,12 +70,12 @@
                                                 <thead>
                                                     <tr role="row">
                                                         <th width="70px">#</th>
-                                                        <th>Name</th>
+                                                        <th width="300px">Name</th>
                                                         <th width="110px">Ngôn ngữ</th>
                                                         <th width="70px">Sắp xếp</th>
                                                         <th width="110px">Trạng thái</th>
-                                                        <th></th>
-                                                        <th></th>
+                                                        <th>Action </th>
+                                                        <th>Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
