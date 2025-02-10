@@ -12,6 +12,7 @@
 <script>
     // Gọi API khi tải trang
     $(document).ready(function() {
+        let baseUrl = "{{ config('app.url') }}";
         $.ajax({
             url: "{{ route('user.get_posts', ['category' => $category->category_bottom]) }}", // URL API
             type: "GET", // Phương thức GET
@@ -30,7 +31,7 @@
                                         '<img src="' + post.cover_image + '" alt="' + post.title + '">' +
                                     '</div>' +
                                     '<div class="news-info text-center">' +
-                                        `<h5><a href="client/post/${post.category.slug ?? 'null'}/${post.slug}">` + post.title + `</a></h5>` +
+                                        `<h5><a href="${baseUrl}/client/post/${post.category.slug ?? 'null'}/${post.slug}">` + post.title + `</a></h5>` +
                                     '</div>' +
                                 '</div>' +
                             '</div>'
