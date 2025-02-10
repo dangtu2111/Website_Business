@@ -250,10 +250,7 @@
                     $.each(response.menus, function (key, menu) {
                         menuHtml += stringHtml(menu); // Gọi hàm stringHtml để tạo HTML
                     });
-                    menuHtml+=`<li class="menu-item ">
-                                            <a href="{{route('user.parner')}}">Đối tác</a>
-                                        </li>
-
+                    menuHtml+=`
                                         <li class="menu-item ">
                                             <a href="{{route('user.contact')}}">Liên hệ</a>
                                         </li>`;
