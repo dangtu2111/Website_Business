@@ -15,6 +15,7 @@ interface PostRepositoryInterface extends BaseRepositoryInterface
     public function allWithCategory();
     
     public function paginateWhereId($id,int $num);
+    public function PostCategoryNull();
 
 
 }
