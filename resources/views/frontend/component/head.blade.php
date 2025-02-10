@@ -7,27 +7,28 @@
     <title>{{ ($config['title']??($category->name ?? "Đây là một Page")) }}</title>
     <link rel="shortcut icon" href="{{ config('info.logo')}}" />
 
-<link href="{{ asset('Frontend/css/fontawesome/css/all.min.css') }}" rel="stylesheet" defer>
-<link rel="stylesheet" href="{{ asset('Frontend/plugins/bootstrap/css/bootstrap.min9ed2.css?v=1736487372') }}" />
-<link rel="stylesheet" href="{{ asset('Frontend/plugins/swiper/css/swiper-bundle.min9ed2.css?v=1736487372') }}" defer>
-<link rel="stylesheet" href="{{ asset('Frontend/plugins/ui/style.css') }}" defer>
-<link rel="stylesheet" href="{{ asset('Frontend/plugins/aos/aos9ed2.css?v=1736487372') }}" defer>
+    <link href="{{ asset('Frontend/css/fontawesome/css/all.min.css') }}" rel="stylesheet" defer>
+    <link rel="stylesheet" href="{{ asset('Frontend/plugins/bootstrap/css/bootstrap.min9ed2.css?v=1736487372') }}" />
+    <link rel="stylesheet" href="{{ asset('Frontend/plugins/swiper/css/swiper-bundle.min9ed2.css?v=1736487372') }}" defer>
+    <link rel="stylesheet" href="{{ asset('Frontend/plugins/ui/style.css') }}" defer>
+    <link rel="stylesheet" href="{{ asset('Frontend/plugins/aos/aos9ed2.css?v=1736487372') }}" defer>
 
-<link href="{{ asset('Frontend/css/owl.carousel.css') }}" rel="stylesheet">
-<link href="{{ asset('Frontend/css/owl.theme.css') }}" rel="stylesheet">
-<link href="{{ asset('Frontend/css/forall9ed2.css?v=1736487372') }}" rel="stylesheet">
-<link href="{{ asset('Frontend/css/settings9ed2.css?v=1736487372') }}" rel="stylesheet">
+    <link href="{{ asset('Frontend/css/owl.carousel.css') }}" rel="stylesheet">
+    <link href="{{ asset('Frontend/css/owl.theme.css') }}" rel="stylesheet">
+    <link href="{{ asset('Frontend/css/forall9ed2.css?v=1736487372') }}" rel="stylesheet">
+    <link href="{{ asset('Frontend/css/settings9ed2.css?v=1736487372') }}" rel="stylesheet">
 
-<link href="{{ asset('Frontend/css/style9ed2.css?v=1736487372') }}" rel="stylesheet">
-<link href="{{ asset('Frontend/css/main9ed2.css?v=1736487372') }}" rel="stylesheet">
+    <link href="{{ asset('Frontend/css/style9ed2.css?v=1736487372') }}" rel="stylesheet">
+    <link href="{{ asset('Frontend/css/main9ed2.css?v=1736487372') }}" rel="stylesheet">
 
 
     <style>
         .breadcrumb-item+.breadcrumb-item::before {
-    float: left;
-    padding-right: .5rem;
-    color: white;
-    content: var(--bs-breadcrumb-divider, "/");}
+            float: left;
+            padding-right: .5rem;
+            color: white;
+            content: var(--bs-breadcrumb-divider, "/");
+        }
 
         a.m57-form-btn-show {
             background: #fff;
@@ -438,18 +439,18 @@
 
         @-webkit-keyframes glowing1 {
             0% {
-                background-color: #004A7F;
-                -webkit-box-shadow: 0 0 3px #004A7F;
+                background-color: #662424;
+                box-shadow: 0 0 3px #662424;
             }
 
             50% {
-                background-color: #0094FF;
-                -webkit-box-shadow: 0 0 10px #0094FF;
+                background-color: #fb5353;
+                box-shadow: 0 0 10px #fb5353;
             }
 
             100% {
-                background-color: #004A7F;
-                -webkit-box-shadow: 0 0 3px #004A7F;
+                background-color: #662424;
+                box-shadow: 0 0 3px #662424;
             }
         }
 
