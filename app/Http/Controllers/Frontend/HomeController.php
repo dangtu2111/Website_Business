@@ -20,7 +20,7 @@ class HomeController extends Controller
     
         // Đọc và giải mã JSON
         $config = json_decode(file_get_contents($jsonPath), true);
-        $news=$this->postRepository->paginateWhereId(intval($config['news']['category']),3);\
+        $news=$this->postRepository->paginateWhereId(intval($config['news']['category']),3);
         dd($news);
         // Truyền cấu hình đến View
    
