@@ -15,7 +15,7 @@
           </div>
           <div class="blo-detail-text">
             <p><span
-                style="color: #163865; font-size: 17px; font-weight: bold; white-space-collapse: preserve; text-decoration-skip-ink: none; font-family: arial, helvetica, sans-serif;"><img
+                style="color: #ae0201; font-size: 17px; font-weight: bold; white-space-collapse: preserve; text-decoration-skip-ink: none; font-family: arial, helvetica, sans-serif;"><img
                   src="storage/fac8dcafc7346ea0ee5034d36f8734d1/wp-content/uploads/700/2024/10/11/5_1728640868_9068931919130336.jpg"
                   width="1014" height="423" /></span></p>
             <ul>
