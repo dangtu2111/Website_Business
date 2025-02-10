@@ -85,9 +85,14 @@
                                                     @foreach($category->post as $post)
                                                     <tr role="row" class="even">
                                                         <td>{{$post->id}}</td>
-                                                        <td><a href="{{route('admin.post.edit',['id'=>$post->id])}}">
+
+                                                        <td>
+                                                            <div style="max-width:100%">
+                                                            <a href="{{route('admin.post.edit',['id'=>$post->id])}}">
                                                                 {{$post->title}}
-                                                            </a> <br>
+                                                            </a> 
+                                                            </div>
+                                                            <br>
                                                             Lượt xem: 0
 
                                                             <br>
