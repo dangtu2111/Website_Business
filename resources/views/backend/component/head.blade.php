@@ -16,7 +16,7 @@
     <link href="{{asset('Backend/default/assets/plugins/pace/pace.css?v=1736492186')}}" rel="stylesheet">
     <link href="{{asset('Backend/default/assets/css/main.min.css')}}" rel="stylesheet">
     <link href="{{asset('Backend/default/assets/css/custom.css?v=1736492186')}}" rel="stylesheet">
-    <!-- <link href="{{asset('Backend/default/assets/css/nestable.css?v=1736830028')}}" rel="stylesheet"> -->
+    <link href="{{asset('Backend/default/assets/css/nestable.css?v=1736830028')}}" rel="stylesheet">
   
     @if (isset($config['css']) && is_array($config['css']))
     @if(isset($config['css']))
