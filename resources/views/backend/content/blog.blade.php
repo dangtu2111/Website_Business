@@ -87,7 +87,7 @@
                                                         <td>{{$post->id}}</td>
 
                                                         <td>
-                                                            <div style="max-width:100%">
+                                                            <div style="max-width:70%">
                                                             <a href="{{route('admin.post.edit',['id'=>$post->id])}}">
                                                                 {{$post->title}}
                                                             </a> 
