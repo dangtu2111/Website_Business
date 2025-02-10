@@ -91,7 +91,6 @@
                                                             <a href="{{route('admin.post.edit',['id'=>$post->id])}}">
                                                                 {{$post->title}}
                                                             </a> 
-                                                            </div>
                                                             <br>
                                                             Lượt xem: 0
 
@@ -101,6 +100,8 @@
                                                             Ngày cập nhật: {{$post->updated_at}}
                                                             <code><a href="{{ config('app.url') . '/client/post/' . ($post->category->slug??"null") . '/' . $post->slug }}" target="_blank" style="color: rgb(102, 102, 102);">
                                                                     {{ config('app.url') . '/client/post/' . ($post->category->slug ?? 'null') . '/' . $post->slug }}</a></code>
+                                                            </div>
+                                                            
                                                         </td>
                                                         <td class="text-center"><a href="https://admin.hoidoanhnghiepquan1.com/post/detail?id=f4c2563a-c254-4bb7-9111-72f2d68e9b45&amp;language=en">EN</a></td>
                                                         <td><input type="text" name="sorted[f4c2563a-c254-4bb7-9111-72f2d68e9b45]" value="0" style="width: 70px;"></td>
