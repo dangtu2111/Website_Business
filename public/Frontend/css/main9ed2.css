@@ -75,7 +75,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-	color: #154734;
+	color: #1c5402;
 	margin-bottom: 15px;
 	padding-top: 10px;
 	line-height: 1.5em;
@@ -365,7 +365,7 @@ body a,
 .navbar-nav li>a:hover,
 .navbar-nav li.current-menu-ancestor>a,
 .navbar-nav li.current-menu-item>a {
-	color: #154734;
+	color: #1c5402;
 }
 
 /*secondary 252525*/
