@@ -65,12 +65,54 @@
                                             </div>
                                             <div class="col-md-3 col-sm-3 col-xs-3 text-end"><button type="button" class="el-button el-button--warning"><!----><!----><span>Sắp xếp</span></button> <a href="{{route('admin.blogs.insert')}}" class="btn btn-success" style="margin-right: 0px; height: 40px; position: relative; top: -1px; display: inline-flex; align-content: center; align-items: center;">Đăng mới</a></div>
                                         </div>
+                                        <style>
+                                            /* Sử dụng fixed table layout để các cột có chiều rộng cố định */
+                                            .table.table-striped {
+                                                width: 100%;
+                                                table-layout: fixed;
+                                            }
+
+                                            /* Áp dụng cho tất cả các ô (th và td) */
+                                            .table.table-striped th,
+                                            .table.table-striped td {
+                                                overflow: hidden;
+                                                /* Ẩn nội dung vượt quá chiều rộng */
+                                                text-overflow: ellipsis;
+                                                /* Thêm dấu "..." khi nội dung quá dài */
+                                                white-space: nowrap;
+                                                /* Giữ nội dung trên 1 dòng */
+                                            }
+
+                                            /* Định nghĩa chiều rộng cho các cột dựa vào vị trí của chúng */
+                                            .table.table-striped th:nth-child(1) {
+                                                width: 70px;
+                                            }
+
+                                            .table.table-striped th:nth-child(2) {
+                                                width: auto;
+                                            }
+
+                                            .table.table-striped th:nth-child(3) {
+                                                width: 110px;
+                                            }
+
+                                            .table.table-striped th:nth-child(4) {
+                                                width: 70px;
+                                            }
+
+                                            .table.table-striped th:nth-child(5) {
+                                                width: 110px;
+                                            }
+
+                                            /* Các cột 6 và 7 sẽ chiếm phần còn lại của chiều rộng bảng */
+                                        </style>
+
                                         <form action="" id="pageForm" name="pageForm" method="POST" enctype="multipart/form-data">
                                             <table class="table table-striped">
                                                 <thead>
                                                     <tr role="row">
                                                         <th width="70px">#</th>
-                                                        <th width="300px">Name</th>
+                                                        <th >Name</th>
                                                         <th width="110px">Ngôn ngữ</th>
                                                         <th width="70px">Sắp xếp</th>
                                                         <th width="110px">Trạng thái</th>
@@ -88,20 +130,20 @@
 
                                                         <td>
                                                             <div style="max-width:70%">
-                                                            <a href="{{route('admin.post.edit',['id'=>$post->id])}}">
-                                                                {{$post->title}}
-                                                            </a> 
-                                                            <br>
-                                                            Lượt xem: 0
+                                                                <a href="{{route('admin.post.edit',['id'=>$post->id])}}">
+                                                                    {{$post->title}}
+                                                                </a>
+                                                                <br>
+                                                                Lượt xem: 0
 
-                                                            <br>
-                                                            Ngày đăng: {{$post->created_at}}
-                                                            <br>
-                                                            Ngày cập nhật: {{$post->updated_at}}
-                                                            <code><a href="{{ config('app.url') . '/client/post/' . ($post->category->slug??"null") . '/' . $post->slug }}" target="_blank" style="color: rgb(102, 102, 102);">
-                                                                    {{ config('app.url') . '/client/post/' . ($post->category->slug ?? 'null') . '/' . $post->slug }}</a></code>
+                                                                <br>
+                                                                Ngày đăng: {{$post->created_at}}
+                                                                <br>
+                                                                Ngày cập nhật: {{$post->updated_at}}
+                                                                <code><a href="{{ config('app.url') . '/client/post/' . ($post->category->slug??"null") . '/' . $post->slug }}" target="_blank" style="color: rgb(102, 102, 102);">
+                                                                        {{ config('app.url') . '/client/post/' . ($post->category->slug ?? 'null') . '/' . $post->slug }}</a></code>
                                                             </div>
-                                                            
+
                                                         </td>
                                                         <td class="text-center"><a href="https://admin.hoidoanhnghiepquan1.com/post/detail?id=f4c2563a-c254-4bb7-9111-72f2d68e9b45&amp;language=en">EN</a></td>
                                                         <td><input type="text" name="sorted[f4c2563a-c254-4bb7-9111-72f2d68e9b45]" value="0" style="width: 70px;"></td>
