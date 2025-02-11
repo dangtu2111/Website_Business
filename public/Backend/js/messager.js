@@ -97,7 +97,7 @@ $(document).ready(function () {
         }
 
         // Lấy thông tin chat_id và sender_id từ localStorage
-        const chatId = localStorage.getItem("chat_id"); // Lấy chat_id từ localStorage
+        const chatId = parseInt($("#chat-name").attr("data-id"), 10); // Lấy chat_id từ localStorage
         const senderId = localStorage.getItem("clientId"); // Lấy sender_id từ localStorage
 
         // Nếu không có chat_id hoặc sender_id, thông báo lỗi
