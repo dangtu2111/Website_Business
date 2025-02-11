@@ -114,6 +114,33 @@ $(document).ready(function () {
         // Xóa giá trị trong input sau khi gửi
         
     });
+    $(document).on("click", ".remove-chat", function () {
+        var chatId = $(this).data("id");
+    
+        if (confirm("Bạn có chắc chắn muốn xóa cuộc trò chuyện này không?")) {
+            $.ajax({
+                url: 'messager/remove',
+                method: 'DELETE',
+                data: {
+                    _token: $('meta[name="csrf-token"]').attr('content'), // CSRF token
+                    chatId: chatId
+                },
+                success: function (response) {
+                    if (response.success) {
+                        alert(response.message);
+                        // Loại bỏ dòng tương ứng khỏi giao diện
+                        $(this).closest(".chat-item").remove();
+                    } else {
+                        alert("Lỗi: " + response.message);
+                    }
+                },
+                error: function (xhr) {
+                    alert("Đã xảy ra lỗi: " + xhr.responseJSON.message);
+                }
+            });
+        }
+    });
+    
     $(document).on("click", ".chat-item", function () {
         var id = $(this).attr("data-id");
         console.log("id ", id);

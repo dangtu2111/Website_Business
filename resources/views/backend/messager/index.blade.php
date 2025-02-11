@@ -28,6 +28,8 @@
                         </p>
 
                     </div>
+                    <button type="button" data-id="{{$chat->id}}" class="remove-chat el-button is-circle"><!----><i class="el-icon-delete"></i><!----></button>
+
                 </div>
                 @endforeach
                 @endif
