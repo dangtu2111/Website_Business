@@ -53,6 +53,7 @@
             </div>
             <div class="chat-footer">
                 <input type="text" id="input-send" placeholder="Nhập nội dung cần hỗ trợ">
+            
                 <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
                 <button id="send-btn">
                     <img width="30" src="{{asset('Frontend\images\send_icon.png')}}" alt="">
