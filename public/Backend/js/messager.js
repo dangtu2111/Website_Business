@@ -98,7 +98,7 @@ $(document).ready(function () {
 
         // Lấy thông tin chat_id và sender_id từ sessionStorage
         const chatId = parseInt($("#chat-name").attr("data-id"), 10); // Lấy chat_id từ sessionStorage
-        const senderId = sessionStorage.getItem("clientId"); // Lấy sender_id từ sessionStorage
+        const senderId = parseInt($("#chat-name").attr("client-id"), 10); // Lấy sender_id từ sessionStorage
 
         // Nếu không có chat_id hoặc sender_id, thông báo lỗi
         if (!chatId || !senderId) {
