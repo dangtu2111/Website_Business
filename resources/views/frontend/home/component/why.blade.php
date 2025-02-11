@@ -3,7 +3,8 @@ $url = asset($config['why']['img']);
 ?>
 <div class="full-container gw3">
             <div class="no-gutters row align-items-center home-why-us-section gray">
-                <div class="col-md-6 col-sm-12 bg mycbg "
+                <img class="hideonscreenbig" src="{{$url}}" alt="img "/>
+                <div class="col-md-6 col-sm-12 bg mycbg hideonmobile"
                     style="background-image: url({{$url}});">
                     <section class="ldtl-section content" style="visibility: hidden;">
                         <h2 class="ldtl-title">{{$config['why']['title']}}
