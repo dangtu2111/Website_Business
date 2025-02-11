@@ -84,6 +84,12 @@ $(document).ready(function () {
         // Ẩn hộp thoại chat
         $("#chat-box").hide();
     }
+    $("#input-send").on("keypress", function (event) {
+        if (event.which === 13) { // Kiểm tra phím Enter
+            event.preventDefault(); // Ngăn hành vi mặc định của Enter
+            $("#send-btn").trigger("click"); // Kích hoạt sự kiện Click của nút send-btn
+        }
+    });
     $(document).on("click", "#send-btn", function () {
         if ($("#input-send").val() == "") {
             return;
