@@ -60,6 +60,7 @@ Route::group(['prefix' => 'admin', 'middleware' => AuthenticateMiddleware::class
     Route::post('menu/update', [MenuController::class, 'menu_update'])->name('admin.menu_update');
     Route::get('menu/delete/{id}', [MenuController::class, 'menu_delete'])->name('admin.deleteMenu');
     Route::get('/messager', [MessagerController::class, 'index'])->name('admin.messager');
+    Route::delete('/messager/remove', [MessagerController::class, 'removeChat'])->name('admin.messager.remove');
     Route::get('/get-chat-messages/{chatId}', [MessagerController::class, 'getMessages']);
 });
 // Route::get('/', function () {
