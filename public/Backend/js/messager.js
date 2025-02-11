@@ -96,9 +96,9 @@ $(document).ready(function () {
             return;
         }
 
-        // Lấy thông tin chat_id và sender_id từ localStorage
-        const chatId = parseInt($("#chat-name").attr("data-id"), 10); // Lấy chat_id từ localStorage
-        const senderId = localStorage.getItem("clientId"); // Lấy sender_id từ localStorage
+        // Lấy thông tin chat_id và sender_id từ sessionStorage
+        const chatId = parseInt($("#chat-name").attr("data-id"), 10); // Lấy chat_id từ sessionStorage
+        const senderId = sessionStorage.getItem("clientId"); // Lấy sender_id từ sessionStorage
 
         // Nếu không có chat_id hoặc sender_id, thông báo lỗi
         if (!chatId || !senderId) {
@@ -125,10 +125,10 @@ $(document).ready(function () {
             cluster: "ap1",
         });
 
-        // Lấy chat_id từ localStorage và kiểm tra
+        // Lấy chat_id từ sessionStorage và kiểm tra
         var chatId = id;
         if (!chatId) {
-            console.error("Chat ID không tìm thấy trong localStorage");
+            console.error("Chat ID không tìm thấy trong sessionStorage");
         } else {
             // Tạo tên kênh và đăng ký kênh
             var stringChanel = "chat." + chatId;

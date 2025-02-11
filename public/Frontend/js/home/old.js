@@ -67,10 +67,10 @@ jQuery(document).ready(function ($) {
         cluster: 'ap1'
     });
 
-    // Lấy chat_id từ localStorage và kiểm tra
-    var chatId = localStorage.getItem("chat_id");
+    // Lấy chat_id từ sessionStorage và kiểm tra
+    var chatId = sessionStorage.getItem("chat_id");
     if (!chatId) {
-        console.error('Chat ID không tìm thấy trong localStorage');
+        console.error('Chat ID không tìm thấy trong sessionStorage');
     } else {
         // Tạo tên kênh và đăng ký kênh
         var stringChanel = 'chat.' + chatId;
@@ -131,9 +131,9 @@ jQuery(document).ready(function ($) {
             return;
         }
 
-        // Lấy thông tin chat_id và sender_id từ localStorage
-        const chatId = localStorage.getItem("chat_id"); // Lấy chat_id từ localStorage
-        const senderId = localStorage.getItem("clientId"); // Lấy sender_id từ localStorage
+        // Lấy thông tin chat_id và sender_id từ sessionStorage
+        const chatId = sessionStorage.getItem("chat_id"); // Lấy chat_id từ sessionStorage
+        const senderId = sessionStorage.getItem("clientId"); // Lấy sender_id từ sessionStorage
 
         // Nếu không có chat_id hoặc sender_id, thông báo lỗi
         if (!chatId || !senderId) {
@@ -181,7 +181,7 @@ jQuery(document).ready(function ($) {
         $(this).hide();
         // Hiển thị phần tử #chat-container
         $("#chat-container").show();
-        var customerInfo = JSON.parse(localStorage.getItem("customer_info")); // Sử dụng sessionStorage nếu bạn muốn lưu trong session
+        var customerInfo = JSON.parse(sessionStorage.getItem("customer_info")); // Sử dụng sessionStorage nếu bạn muốn lưu trong session
 
         if (customerInfo) {
             // Kiểm tra nếu có thông tin khách hàng
@@ -233,8 +233,8 @@ jQuery(document).ready(function ($) {
                         description: yeucau,
                     };
 
-                    // Lưu thông tin vào localStorage
-                    localStorage.setItem(
+                    // Lưu thông tin vào sessionStorage
+                    sessionStorage.setItem(
                         "customer_info",
                         JSON.stringify(customer)
                     );
@@ -267,8 +267,8 @@ jQuery(document).ready(function ($) {
                         success: function (response) {
                             // Xử lý khi nhận được phản hồi từ server
                             console.log(response);
-                            localStorage.setItem("chat_id", response.chat.id);
-                            localStorage.setItem(
+                            sessionStorage.setItem("chat_id", response.chat.id);
+                            sessionStorage.setItem(
                                 "clientId",
                                 response.chat.user_two_id
                             );
@@ -299,21 +299,21 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    // Hàm lưu lịch sử tin nhắn vào localStorage
+    // Hàm lưu lịch sử tin nhắn vào sessionStorage
     function saveMessageHistory(message, type) {
-        // Kiểm tra nếu message_history đã có trong localStorage, nếu không thì khởi tạo nó
+        // Kiểm tra nếu message_history đã có trong sessionStorage, nếu không thì khởi tạo nó
         var messageHistory =
-            JSON.parse(localStorage.getItem("message_history")) || [];
+            JSON.parse(sessionStorage.getItem("message_history")) || [];
 
         // Thêm tin nhắn mới vào lịch sử
         messageHistory.push({ message: message, type: type });
 
-        // Lưu lại lịch sử tin nhắn vào localStorage
-        localStorage.setItem("message_history", JSON.stringify(messageHistory));
+        // Lưu lại lịch sử tin nhắn vào sessionStorage
+        sessionStorage.setItem("message_history", JSON.stringify(messageHistory));
     }
     function loadMessageHistory() {
         var messageHistory =
-            JSON.parse(localStorage.getItem("message_history")) || [];
+            JSON.parse(sessionStorage.getItem("message_history")) || [];
         messageHistory.forEach(function (item) {
             var html = `<div class="${item.type}">`;
             if (item.type == "response")
