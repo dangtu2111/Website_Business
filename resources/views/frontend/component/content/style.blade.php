@@ -458,20 +458,18 @@
     }
 
     @keyframes glowing1 {
-      0% {
-        background-color: #004A7F;
-        box-shadow: 0 0 3px #004A7F;
-      }
-
-      50% {
-        background-color: #0094FF;
-        box-shadow: 0 0 10px #0094FF;
-      }
-
-      100% {
-        background-color: #004A7F;
-        box-shadow: 0 0 3px #004A7F;
-      }
+        0% {
+        background-color: #662424;
+        box-shadow: 0 0 3px #662424;
+        }
+        50% {
+        background-color: #fb5353;
+        box-shadow: 0 0 10px #fb5353;
+        }
+        100% {
+        background-color: #662424;
+        box-shadow: 0 0 3px #662424;
+        }
     }
 
     @media (max-width: 600px) {
