@@ -10,6 +10,15 @@ $url = asset($config['why']['img']);
                         <h2 class="ldtl-title">{{$config['why']['title']}}
                             <b></b>
                         </h2>
+                        <h2 class="ldtl-title">{{$config['why']['title']}}
+                            <b></b>
+                        </h2>
+                        <h2 class="ldtl-title">{{$config['why']['title']}}
+                            <b></b>
+                        </h2>
+                        <h2 class="ldtl-title">{{$config['why']['title']}}
+                            <b></b>
+                        </h2>
                         <div class="mb30">
 
                         {!! base64_decode($config['why']['content']) !!}
