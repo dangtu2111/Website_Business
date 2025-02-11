@@ -26,7 +26,7 @@ class HomeController extends Controller
        
        
         $template = 'frontend.home.index';
-
+        $config['title']="Trang Chủ";
         // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
         return view('frontend.layout.layout', compact( 'template','config','news'));
     }
