@@ -24,7 +24,7 @@ $(document).ready(function () {
             },
         });
     }
-    function openChat(chatId) {
+    function openChat(chatId,clientId) {
         // Gửi yêu cầu AJAX để lấy thông tin cuộc trò chuyện
         $.ajax({
             url: `./get-chat-messages/${chatId}`, // URL API để lấy tin nhắn
@@ -33,6 +33,7 @@ $(document).ready(function () {
                 // Cập nhật tên cuộc trò chuyện
                 $("#chat-name p").text(data.user.name);
                 $("#chat-name").attr("data-id", chatId);
+                $("#chat-name").attr("client-id", clientId);
                 // Tải các tin nhắn
                 let chatMessages = $("#chat-messages");
                 chatMessages.empty(); // Xóa các tin nhắn cũ trước khi thêm tin nhắn mới
@@ -143,8 +144,9 @@ $(document).ready(function () {
     
     $(document).on("click", ".chat-item", function () {
         var id = $(this).attr("data-id");
+        var clientId = $(this).attr("client-id");
         console.log("id ", id);
-        openChat(id);
+        openChat(id,clientId);
         Pusher.logToConsole = true;
 
         // Khởi tạo Pusher với app key và cluster
