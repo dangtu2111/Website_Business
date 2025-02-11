@@ -107,6 +107,8 @@ $(document).ready(function () {
         }
 
         // Gọi hàm sendMessage
+        console.log("Chatid: ",chatId);
+        console.log("senderId: ",senderId);
         sendMessage(chatId, senderId, message);
 
         // Xóa giá trị trong input sau khi gửi
