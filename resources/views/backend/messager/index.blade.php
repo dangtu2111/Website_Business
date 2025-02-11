@@ -14,7 +14,8 @@
             <div class="chat-list">
                 @if(isset($chats))
                 @foreach($chats as $chat)
-                <div class="chat-item" data-id="{{$chat->id}}">
+               
+                <div class="chat-item" data-id="{{$chat->id}}" client-id="{{ Auth::user()->id }}">
                     <img src="https://placehold.co/40x40" alt="Profile picture of Lan Dang">
                     <div class="chat-info">
                         <p class="name">{{ $chat->userTwo->name }}</p>
