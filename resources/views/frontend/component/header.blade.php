@@ -14,7 +14,7 @@
 
                                     </a>
                                 </div>
-                                <div class="col-md-10 ">
+                                <div class="col-md-10 hideonmobile">
                                     <h5 style=" margin-bottom: 0;">CLB DOANH NHÂN TRÀ VINH TẠI TP.HCM</h5>
                                     <h5 style="padding-top: 0;">VỮNG VÀNG KẾT NỐI - ĐỒNG LÒNG PHÁT TRIỂN</h5>
                                 </div>
