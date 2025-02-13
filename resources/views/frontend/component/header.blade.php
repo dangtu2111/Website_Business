@@ -15,8 +15,8 @@
                                     </a>
                                 </div>
                                 <div class="col-md-10 ">
-                                    <h5 style="color: #ae0201; margin-bottom: 0;">CLB DOANH NHÂN TRÀ VINH TẠI TP.HCM</h5>
-                                    <h5 style="color: #ae0201;padding-top: 0;">VỮNG VÀNG KẾT NỐI - ĐỒNG LÒNG PHÁT TRIỂN</h5>
+                                    <h5 style=" margin-bottom: 0;">CLB DOANH NHÂN TRÀ VINH TẠI TP.HCM</h5>
+                                    <h5 style="padding-top: 0;">VỮNG VÀNG KẾT NỐI - ĐỒNG LÒNG PHÁT TRIỂN</h5>
                                 </div>
                             </div>
                         </div>
