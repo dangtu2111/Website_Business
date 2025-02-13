@@ -31,7 +31,7 @@
 
         a.m57-form-btn-show {
             background: #fff;
-            color: #fff !important;
+            color: #0f4722 !important;
             border: 2px solid var(--primary);
             border-radius: 25px;
             padding: 0px 30px;
@@ -489,18 +489,19 @@
 
         @keyframes glowing1 {
             0% {
-                background-color: #662424;
-                box-shadow: 0 0 3px #662424;
+                background-color: #ffffff;
+                box-shadow: 0 0 3px #eb4949;
+                border: 2px solid transparent;
             }
 
             50% {
                 background-color: #fb5353;
                 box-shadow: 0 0 10px #fb5353;
             }
-
             100% {
-                background-color: #662424;
-                box-shadow: 0 0 3px #662424;
+                background-color: #ffffff;
+                box-shadow: 0 0 3px #fa4f4f;
+                border: 2px solid transparent;
             }
         }
 
