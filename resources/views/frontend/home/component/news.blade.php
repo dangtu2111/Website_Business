@@ -27,8 +27,7 @@
                                 <p>{{$new->description}} [&hellip;]</p>
                             </div>
                             <div class="readmore"><a class="button transparent-primary"
-                                    href="{{ config('app.url') . '/client/post/' . ($new->category->slug??"null") . '/' . $new->slug }}">View
-                                    more</a></div>
+                                    href="{{ config('app.url') . '/client/post/' . ($new->category->slug??"null") . '/' . $new->slug }}">Xem ngay</a></div>
                         </div>
                     </div>
                 </div>
@@ -49,8 +48,7 @@
                                 <p>{{$new->description}} [&hellip;]</p>
                             </div>
                             <div class="readmore"><a class="button transparent-primary"
-                                    href="{{ config('app.url') . '/client/post/' . ($new->category->slug??"null") . '/' . $new->slug }}">View
-                                    more</a></div>
+                                    href="{{ config('app.url') . '/client/post/' . ($new->category->slug??"null") . '/' . $new->slug }}">Xem ngay</a></div>
                         </div>
                         <div class="thumb col-md-12">
                             <a href="{{ config('app.url') . '/client/post/' . ($new->category->slug??"null") . '/' . $new->slug }}"
