@@ -4,7 +4,7 @@ $url = asset($config['why']['img']);
 <div class="full-container gw3">
             <div class="no-gutters row align-items-center home-why-us-section gray">
                 <img class="hideonscreenbig" src="{{$url}}" alt="img "/>
-                <img class="col-md-6 col-sm-12 bg mycbg hideonmobile" src="http://18.215.177.37/storage/photos/1/6d0e364b-1ea4-49b3-8545-4818c24092ed.jpg" alt="img ">
+                <img class="col-md-6 col-sm-12 bg mycbg hideonmobile" src="{{$url}}" alt="img ">
                
                 <div class="col-md-6 col-sm-12">
                     <section class="ldtl-section content">
