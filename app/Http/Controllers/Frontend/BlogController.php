@@ -33,11 +33,11 @@ class BlogController extends Controller
         $config['title']=$categories_item->name;
        
 
-        
+        $category=$categories_item;
         $posts=$this->postRepository->findBy_CategoryId($categories_item->id);
 
         // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
-        return view('frontend.layout.layout', compact( 'template','config','posts'));
+        return view('frontend.layout.layout', compact( 'template','config','posts','category'));
     }
     public function post($categorySlug, $postSlug){
         $template = 'frontend.posts.index';
