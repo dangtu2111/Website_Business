@@ -1,4 +1,11 @@
-<div class="header-banner">
+@if(!empty($config['banner']['img']) && is_array($config['banner']['img']) && !empty($config['banner']['img'][0]))
+    <section class="breadcrumbs-section background_bg header-bg" 
+        data-img-src="{{ $config['banner']['img'][0] }}" 
+        style="background: url({{ $config['banner']['img'][0] }}) center center / cover;">
+    </section>
+@endif
+
+{{--<div class="header-banner">
     <div id="cwvn-slider">
         <div id="rev_slider_8_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
             style="margin: 0px auto; background-color: #e9e9e9; padding: 0px; margin-top: 0px; margin-bottom: 0px; max-height: 700px;">
@@ -35,4 +42,4 @@
 
         </div>
     </div>
-</div>
+</div>--}}
