@@ -122,7 +122,7 @@
                                             </p>
                                         </div>
                                         <div class="readmore"><a class="button transparent-primary"
-                                                href="cach-tham-gia-hoi-vien-doanh-nghiep-quan-1.html">View more</a>
+                                                href="cach-tham-gia-hoi-vien-doanh-nghiep-quan-1.html">Xem ngay</a>
                                         </div>
                                     </div>
                                 </div>
