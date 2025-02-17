@@ -38,8 +38,7 @@
                                             </p>
                                         </div>
                                         <div class="readmore"><a class="button transparent-primary"
-                                                href="{{ config('app.url') . '/client/post/' . ($post->category->slug??"null") . '/' . $post->slug }}">View
-                                                more</a></div>
+                                                href="{{ config('app.url') . '/client/post/' . ($post->category->slug??"null") . '/' . $post->slug }}">Xem ngay</a></div>
                                     </div>
                                 </div>
                             </div>

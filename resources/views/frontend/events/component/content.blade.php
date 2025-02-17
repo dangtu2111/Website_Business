@@ -41,7 +41,7 @@
                                             </p>
                                         </div>
                                         <div class="readmore"><a class="button transparent-primary"
-                                                href="dai_hoi_doanh_nghiep_quan_1.html">View more</a></div>
+                                                href="dai_hoi_doanh_nghiep_quan_1.html">Xem ngay</a></div>
                                     </div>
                                 </div>
                             </div>
