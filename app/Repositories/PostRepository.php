@@ -29,7 +29,11 @@ class PostRepository extends BaseRepository implements PostRepositoryInterface
         return $this->model->with('category')->get();
     }
     public function paginateWhereId($id,int $num){
-        return $this->model->where("category_id",$id)->with('category')->paginate($num);
+        return $this->model
+        ->where("category_id", $id)
+        ->with('category')
+        ->orderBy('created_at', 'desc') // Sắp xếp theo ngày tạo mới nhất
+        ->paginate($num);
     }
     public function postCategoryNull()
     {
