@@ -30,13 +30,7 @@
 
                                     <span>facebook</span>
                                 </a>
-                                <a href="{{config('info.youtube')}}" class="social-profile"
-                                    target="_blank">
-                                    <img
-                                        src="{{asset('Frontend/fac8dcafc7346ea0ee5034d36f8734d1/2024/10/11/yt_1728630483_3630600216823441.jpg')}}">
-
-                                    <span>youtube</span>
-                                </a>
+                                
                             </div>
 
                         </div>
