@@ -277,7 +277,8 @@
                                 </a>
                             </div>
                         </div>
-                        <p>© 2025 {{config('info.name')}}. All Rights Reserved</p>
+                        <p>© 2025 CLB DOANH NHÂN TRÀ VINH TẠI TP.HCM</p>
+                        <p>VỮNG VÀNG KẾT NỐI - ĐỒNG LÒNG PHÁT TRIỂN. All Rights Reserved</p>
                     </div>
                 </div>
             </div>
