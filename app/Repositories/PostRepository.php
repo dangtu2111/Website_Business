@@ -14,7 +14,10 @@ class PostRepository extends BaseRepository implements PostRepositoryInterface
     }
     public function findBy_CategoryId($id)
     {
-        return $this->model->where('category_id', $id)->with('category')->get();
+        return $this->model->where('category_id', $id)
+        ->with('category')
+        ->orderBy('created_at', 'desc')
+        ->get();
     }
 
 
