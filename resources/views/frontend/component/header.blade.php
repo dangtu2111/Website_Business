@@ -7,7 +7,7 @@
                         <div class="col-6">
                             <div class="row">
                                 <div class="col-md-2 logo mb30" style="margin:auto">
-                                    <a class="navbar-brand" href="index.html" title="Hội Doanh Nghiệp Quận 1">
+                                    <a class="navbar-brand" href="{{ route('user.home') }}" title="Hội Doanh Nghiệp Quận 1">
                                         <img class="logo"
                                             src="{{ config('info.logo')}}"
                                             alt="Hội Doanh Nghiệp Quận 1">
