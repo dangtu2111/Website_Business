@@ -11,9 +11,9 @@
     </div>
     <div class="app-menu ps">
         <ul class="accordion-menu">
-            <li class="active-page">
+            <!-- <li class="active-page">
                 <a href="{{route('admin.home')}}" class="active"><i class="material-icons-two-tone">dashboard</i>Thống kê</a>
-            </li>
+            </li> -->
 
 
             <li>
