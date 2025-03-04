@@ -63,9 +63,9 @@ Route::group(['prefix' => 'admin', 'middleware' => AuthenticateMiddleware::class
     Route::delete('/messager/remove', [MessagerController::class, 'removeChat'])->name('admin.messager.remove');
     Route::get('/get-chat-messages/{chatId}', [MessagerController::class, 'getMessages']);
 });
-// Route::get('/', function () {
-//     return redirect()->route('user.home');
-// });
+Route::get('/', function () {
+    return redirect()->route('user.home');
+});
 Route::group(['prefix' => 'client'], function () {
     Route::get('/', [App\Http\Controllers\Frontend\HomeController::class, 'index'])->name('user.home');
     Route::get('/tin-tuc', [App\Http\Controllers\Frontend\NewsController::class, 'index'])->name('user.news');
@@ -80,9 +80,9 @@ Route::group(['prefix' => 'client'], function () {
     Route::get('menu/get-menu', [MenuController::class, 'getMenu'])->name('user.getMenu');
     Route::get('posts/get-posts/{category}', [App\Http\Controllers\Frontend\BlogController::class, 'get_posts'])->name('user.get_posts');
 });
-Route::get('/', function () {
-    return view('showNotification');
-});
+//Route::get('/', function () {
+  //  return view('showNotification');
+//});
 
 Route::get('getPusher', function () {
     return view('form_pusher');
