@@ -80,10 +80,10 @@ Route::group(['prefix' => 'client'], function () {
     Route::get('menu/get-menu', [MenuController::class, 'getMenu'])->name('user.getMenu');
     Route::get('posts/get-posts/{category}', [App\Http\Controllers\Frontend\BlogController::class, 'get_posts'])->name('user.get_posts');
 });
+
 //Route::get('/', function () {
   //  return view('showNotification');
 //});
-
 Route::get('getPusher', function () {
     return view('form_pusher');
 });

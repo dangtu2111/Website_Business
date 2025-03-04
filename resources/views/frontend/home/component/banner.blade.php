@@ -1,8 +1,13 @@
 @if(!empty($config['banner']['img']) && is_array($config['banner']['img']) && !empty($config['banner']['img'][0]))
-    <section class="breadcrumbs-section background_bg header-bg" 
+    <!-- <section class="breadcrumbs-section background_bg header-bg" 
         data-img-src="{{ $config['banner']['img'][0] }}" 
         style="background: url({{ $config['banner']['img'][0] }}) center center / cover;">
-    </section>
+    </section> -->
+    <img src="{{ $config['banner']['img'][0] }}" 
+     alt=" Banner trên website" 
+     title="Banner trên website" 
+     width="100%" 
+     loading="lazy">
 @endif
 
 {{--<div class="header-banner">
