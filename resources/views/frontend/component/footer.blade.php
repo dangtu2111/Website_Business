@@ -253,8 +253,8 @@
                 <div class="row align-items-center">
                     <div class="col-md-6 col-sm-12 text-left">
                         <div class="mb15">
-                        <h3>CLB DOANH NHÂN TRÀ VINH TẠI TP.HCM</h3>
-                        <h3>VỮNG VÀNG KẾT NỐI - ĐỒNG LÒNG PHÁT TRIỂN</h3>
+                        <h3 style="margin-bottom: 0;">CLB DOANH NHÂN TRÀ VINH TẠI TP.HCM</h3>
+                        <h3 style="padding-top: 0;">VỮNG VÀNG KẾT NỐI - ĐỒNG LÒNG PHÁT TRIỂN</h3>
                             <p style="color: #ffffff !important; font-size: 14px !important;">
                                 <strong>Địa chỉ trụ sở chính:</strong> {{config('info.address')}}<br />
                                 <strong>Hotline:</strong> {{config('info.phone')}}<br />
@@ -278,7 +278,7 @@
                             </div>
                         </div>
                         <p>© 2025 CLB DOANH NHÂN TRÀ VINH TẠI TP.HCM</p>
-                        <p>VỮNG VÀNG KẾT NỐI - ĐỒNG LÒNG PHÁT TRIỂN. All Rights Reserved</p>
+                        <p>VỮNG VÀNG KẾT NỐI - ĐỒNG LÒNG PHÁT TRIỂN.</p>
                     </div>
                 </div>
             </div>
