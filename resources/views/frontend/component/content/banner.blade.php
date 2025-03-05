@@ -4,7 +4,7 @@
 ?>
 <section class="breadcrumbs-section background_bg header-bg"
   data-img-src="{{$url_image}}"
-  style="background: url({{$url_image}}) center center / cover;">
+  style="background: url({{$url_image}}) center center / cover;    padding: 70px 0px;">
   <div class="header-bg-overflow"></div>
   <div class="container">
     <div class="row">
