@@ -271,10 +271,10 @@
                                     class="social-profile" target="_blank">
                                     <i class="fa-brands fa-facebook-f"></i>
                                 </a>
-                                <a href="{{config('info.youtube')}}" title="youtube"
+                                <!-- <a href="{{config('info.youtube')}}" title="youtube"
                                     class="social-profile" target="_blank">
                                     <i class="fa-brands fa-youtube"></i>
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                         <p>© 2025 CLB DOANH NHÂN TRÀ VINH TẠI TP.HCM</p>
