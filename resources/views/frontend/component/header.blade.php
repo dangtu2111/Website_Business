@@ -23,20 +23,13 @@
                         
                         <div class="col-6 right-content text-right mb30">
                             <div class="social">
-                                <a href="{{config('info.facebook')}}" class="social-profile"
-                                    target="_blank">
-                                    <img
-                                        src="{{asset('Frontend/fac8dcafc7346ea0ee5034d36f8734d1/2024/10/11/fb_1728630470_6913223557677251.jpg')}}">
-
-                                    <span>facebook</span>
+                            @foreach (config('info.social_network') as $key => $social)
+                                <a href="{{ $social['link'] }}" class="social-profile" target="_blank">
+                                    <img src="{{ $social['icon'] }}" alt="{{ $social['name'] }}" style="width: 50px; height: 50px;">
+                                    <span>{{ $social['name'] }}</span>
                                 </a>
-                                <a href="{{config('info.youtube')}}" class="social-profile"
-                                    target="_blank">
-                                    <img
-                                        src="{{asset('Frontend/fac8dcafc7346ea0ee5034d36f8734d1/2024/10/11/yt_1728630483_3630600216823441.jpg')}}">
+                            @endforeach
 
-                                    <span>youtube</span>
-                                </a>
                                 
                             </div>
 
