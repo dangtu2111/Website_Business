@@ -267,10 +267,14 @@
                     <div class="col-md-6 col-sm-12 text-center">
                         <div class="mb15">
                             <div class="social">
-                                <a href="{{config('info.facebook')}}" title="facebook"
-                                    class="social-profile" target="_blank">
-                                    <i class="fa-brands fa-facebook-f"></i>
+                            @foreach (config('info.social_network') as $key => $social)
+                                <a href="{{ $social['link'] }}" title="{{ $social['name'] }}"
+                                class="social-profile" target="_blank">
+                                    <img src="{{ $social['icon'] }}" alt="{{ $social['name'] }}" style="width: 20px; height: 20px;">
+                                    <span>{{ $social['name'] }}</span>
                                 </a>
+                            @endforeach
+
                                 <!-- <a href="{{config('info.youtube')}}" title="youtube"
                                     class="social-profile" target="_blank">
                                     <i class="fa-brands fa-youtube"></i>
