@@ -24,11 +24,11 @@
                         <div class="col-6 right-content text-right mb30">
                             <div class="social">
                             @foreach (config('info.social_network') as $key => $social)
-                                <a href="{{ $social['link'] }}" class="social-profile" target="_blank">
-                                    <img src="{{ $social['icon'] }}" alt="{{ $social['name'] }}" style="width: 50px; height: 50px;">
-                                    <span>{{ $social['name'] }}</span>
-                                </a>
-                            @endforeach
+                <a href="{{ $social['link'] }}" class="social-profile" target="_blank">
+                    <img src="{{ $social['icon'] }}" alt="{{ $social['name'] }}" >
+                    <span>{{ $social['name'] }}</span>
+                </a>
+            @endforeach
 
                                 
                             </div>

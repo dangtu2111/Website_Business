@@ -270,7 +270,7 @@
                             @foreach (config('info.social_network') as $key => $social)
                                 <a href="{{ $social['link'] }}" title="{{ $social['name'] }}"
                                 class="social-profile" target="_blank">
-                                    <i class="fa-brands fa-{{ $social['name'] }}"></i>
+                                    <i class="fa-brands fa-{{ $key }}"></i>
                                     <span>{{ $social['name'] }}</span>
                                 </a>
                             @endforeach
