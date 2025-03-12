@@ -37,8 +37,11 @@ class HomeController extends Controller
         $template = 'frontend.register.index';
         $config['method']='create';
         $config['title']="Đăng ký hội viên";
+        $category = $this->categoryRepository->first();
+        $banner=$category->cover_image;
+
         // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
-        return view('frontend.layout.layout', compact( 'template','config'));
+        return view('frontend.layout.layout', compact( 'template','config','banner'));
     }
     public function parner(){
         $template = 'frontend.parner.index';
