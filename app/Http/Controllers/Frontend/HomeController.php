@@ -58,6 +58,7 @@ class HomeController extends Controller
         $category = $this->categoryRepository->first();
 
         $banner=$category->cover_image;
+        $config['title']="Liên hệ";
         // Trả về view 'backend.layout.layout' và truyền biến 'config' và 'template'
         return view('frontend.layout.layout', compact( 'template','config','banner'));
     }
