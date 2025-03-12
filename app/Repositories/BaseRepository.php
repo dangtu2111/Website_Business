@@ -41,7 +41,7 @@ class BaseRepository implements BaseRepositoryInterface
     }
     public function first()
     {
-        return Category::query()->first();
+        return $this->model->first();
     }
 
     
