@@ -27,7 +27,7 @@
     <!-- Background section cho mobile -->
     <section class="banner-section-mobile background_bg header-bg" 
         data-img-src="{{ $bannerImg }}" 
-        style="background: url({{ $bannerImg }}) center center / cover;">
+        style="background: url({{ $bannerImg }}) center center / cover;    height: 150px;">
     </section>
 
     <!-- Thẻ img hiển thị cho màn hình lớn -->
