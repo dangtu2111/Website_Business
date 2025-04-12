@@ -207,6 +207,7 @@ class BlogController extends Controller
         switch ($request->input('name')) {
             case 'banner':
                 $config['banner']['img'] = $request->input('cover_image', []); 
+                $config['banner']['img_mobile'] = $request->input('cover_image_mobile', []); 
         
                 $config['banner']['title'] = $request->input('title');
                 $config['banner']['content'] = base64_encode($request->input('content'));

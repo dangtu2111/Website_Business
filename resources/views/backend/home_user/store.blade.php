@@ -38,12 +38,12 @@
                                     </div>
 
 
-                                    <div class="el-form-item"><label class="el-form-item__label">Ảnh bìa</label>
+                                    <div class="el-form-item"><label class="el-form-item__label">Desktop</label>
                                         <div class="el-form-item__content">
                                             @if(Request::url() == url('admin/home_user/edit/banner')||Request::url() == url('admin/home_user/edit/parner'))
-                                                
+
                                             <div id="list-img">
-                                            @if(!empty($config['img']))
+                                                @if(!empty($config['img']))
                                                 @foreach($config['img'] as $img)
                                                 <div style="    display: flex">
                                                     <div class="box-img-upload box-avatar" style="width: 100%;">
@@ -59,10 +59,10 @@
                                                     </div>
                                                     <button type="button" style="    background: transparent;border: none;color: red;font-size: 20px;" data-category-id="#" data-category-name="#" class="remove-img el-button el-button--danger is-circle"><!----><i class="el-icon-delete"></i><!----></button>
                                                 </div>
-                                               
+
                                                 @endforeach
-                                            @else
-                                            <div style="    display: flex">
+                                                @else
+                                                <div style="    display: flex">
                                                     <div class="box-img-upload box-avatar" style="width: 100%;">
                                                         <div style="height: 100%;" class="preview-img">
                                                             <img src="" style="height: 100%;">
@@ -76,9 +76,156 @@
                                                     </div>
                                                     <button type="button" style="    background: transparent;border: none;color: red;font-size: 20px;" data-category-id="#" data-category-name="#" class="remove-img el-button el-button--danger is-circle"><!----><i class="el-icon-delete"></i><!----></button>
                                                 </div>
+                                                @endif
+
+
+                                            </div>
+
+                                            @else
+                                            <div class="box-img-upload box-avatar" style="width: 100%;">
+                                                <div style="height: 100%;" id="holder"> <img src="{{ old('cover_image',($config['img']?? "")) }}" style="height: 100%;"> </div>
+                                                <input id="thumbnail" class="form-control" value="{{ old('cover_image',($config['img']?? "")) }}" type="hidden" name="cover_image">
+
+                                                <a id="lfm" data-input="thumbnail" data-preview="holder" class="upload-file el-link el-link--default"><!---->
+                                                    <span class="el-link--inner">
+                                                        <span class="material-icons">upload_file</span>
+                                                    </span><!---->
+                                                </a>
+                                            </div>
                                             @endif
 
-                                                
+                                            <div class="el-form-item" style="margin-top:40px"><!---->
+                                                <div class="el-form-item__content">
+
+
+                                                    <div class="el-form-item"><label class="el-form-item__label">Mô
+                                                            tả</label>
+                                                        <div class="el-form-item__content">
+
+                                                            <textarea id="summernote" rows="8" name="content"
+                                                                class="form-control"
+                                                                placeholder="Post content"> {{ old('content',  isset($config['content']) ? base64_decode($config['content']) : "") }}
+                                                            </textarea>
+
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="el-form-item"><label class="el-form-item__label">Sắp
+                                                            xếp</label>
+                                                        <div class="el-form-item__content"><input type="text"
+                                                                name="sort_order"
+                                                                value="{{ old('sort_order',($config['sort_order']?? "") ?? "") }}"
+                                                                class="form-control"> <i
+                                                                class="el-form-item__error errors__sorted"></i><!---->
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label
+                                                            class="control-label col-md-12 col-sm-12 col-xs-12">
+                                                            Danh mục hiển thị chân trang
+                                                        </label>
+                                                        <div class="el-select"
+                                                            style="width: 100%;">
+
+                                                            <div
+                                                                class="el-input el-input--suffix">
+                                                                <input type="hidden" class="category_id" name="category_id" value="{{ old('category_id',$config['category'] ?? "") }}" {{ $name === 'news' ? 'required' : '' }}>
+                                                                <!----><input type="text"
+                                                                    readonly="readonly"
+                                                                    autocomplete="off"
+                                                                    placeholder="News bắt buộc phải điền các trường khác không cần điền"
+                                                                    {{ $name === 'news' ? 'required' : '' }}
+                                                                    class="el-input__inner"
+                                                                    style="height: 40px;"><!----><span
+                                                                    class="el-input__suffix"><span
+                                                                        class="el-input__suffix-inner"><i
+                                                                            class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span><!----></span><!----><!---->
+                                                            </div>
+                                                            <div class="el-select-dropdown el-popper is-multiple"
+                                                                style="display: none; min-width: 150.05px;">
+                                                                <div class="el-scrollbar"
+                                                                    style="">
+                                                                    <div class="el-select-dropdown__wrap el-scrollbar__wrap"
+                                                                        style="margin-bottom: -17px; margin-right: -17px;">
+                                                                        <ul
+                                                                            class="el-scrollbar__view el-select-dropdown__list">
+                                                                            <!---->
+                                                                            @foreach($categories as $category)
+                                                                            <li
+                                                                                class="el-select-dropdown__item">
+                                                                                <span data="{{$category->id}}"> {{ $category->name}}</span>
+                                                                            </li>
+
+                                                                            @endforeach
+
+
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div
+                                                                        class="el-scrollbar__bar is-horizontal">
+                                                                        <div class="el-scrollbar__thumb"
+                                                                            style="transform: translateX(0%);">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="el-scrollbar__bar is-vertical">
+                                                                        <div class="el-scrollbar__thumb"
+                                                                            style="transform: translateY(0%);">
+                                                                        </div>
+                                                                    </div>
+                                                                </div><!---->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div><!---->
+                                        </div>
+                                    </div>
+                                    <div class="el-form-item"><label class="el-form-item__label">Mobile</label>
+                                        <div class="el-form-item__content">
+                                            @if(Request::url() == url('admin/home_user/edit/banner')||Request::url() == url('admin/home_user/edit/parner'))
+
+                                            <div id="list-img">
+                                                @if(!empty($config['img_mobile']))
+                                                @foreach($config['img_mobile'] as $img)
+                                                <div style="    display: flex">
+                                                    <div class="box-img-upload box-avatar" style="width: 100%;">
+                                                        <div style="height: 100%;" class="preview-img">
+                                                            <img src="{{ asset($img) }}" style="height: 100%;">
+                                                        </div>
+                                                        <input class="input-item form-control" value="{{ $img }}" type="hidden" name="cover_image_mobile[]">
+                                                        <a data-input="thumbnail" data-preview="holder" class="img-item upload-file el-link el-link--default">
+                                                            <span class="el-link--inner">
+                                                                <span class="material-icons">upload_file</span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <button type="button" style="    background: transparent;border: none;color: red;font-size: 20px;" data-category-id="#" data-category-name="#" class="remove-img el-button el-button--danger is-circle"><!----><i class="el-icon-delete"></i><!----></button>
+                                                </div>
+
+                                                @endforeach
+                                                @else
+                                                <div style="    display: flex">
+                                                    <div class="box-img-upload box-avatar" style="width: 100%;">
+                                                        <div style="height: 100%;" class="preview-img">
+                                                            <img src="" style="height: 100%;">
+                                                        </div>
+                                                        <input class="input-item form-control" value="" type="hidden" name="cover_image_mobile[]">
+                                                        <a data-input="thumbnail" data-preview="holder" class="img-item upload-file el-link el-link--default">
+                                                            <span class="el-link--inner">
+                                                                <span class="material-icons">upload_file</span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <button type="button" style="    background: transparent;border: none;color: red;font-size: 20px;" data-category-id="#" data-category-name="#" class="remove-img el-button el-button--danger is-circle"><!----><i class="el-icon-delete"></i><!----></button>
+                                                </div>
+                                                @endif
+
+
                                             </div>
 
                                             @else

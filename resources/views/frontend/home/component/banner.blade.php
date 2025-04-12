@@ -21,13 +21,16 @@
     $bannerImg = !empty($config['banner']['img']) && is_array($config['banner']['img']) && !empty($config['banner']['img'][0])
         ? $config['banner']['img'][0]
         : null;
+    $bannerImg_mobile = !empty($config['banner']['img_mobile']) && is_array($config['banner']['img_mobile']) && !empty($config['banner']['img_mobile'][0])
+        ? $config['banner']['img_mobile'][0]
+        : null;
 @endphp
 
 @if($bannerImg)
     <!-- Background section cho mobile -->
     <section class="banner-section-mobile background_bg header-bg" 
-        data-img-src="{{ $bannerImg }}" 
-        style="background: url({{ $bannerImg }}) center center / cover;    height: 100px;">
+        data-img-src="{{ $bannerImg_mobile }}" 
+        style="background: url({{ $bannerImg_mobile }}) center center / cover;    height: 100px;">
     </section>
 
     <!-- Thẻ img hiển thị cho màn hình lớn -->
