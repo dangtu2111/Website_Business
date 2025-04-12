@@ -1,14 +1,45 @@
-@if(!empty($config['banner']['img']) && is_array($config['banner']['img']) && !empty($config['banner']['img'][0]))
-    <!-- <section class="breadcrumbs-section background_bg header-bg" 
-        data-img-src="{{ $config['banner']['img'][0] }}" 
-        style="background: url({{ $config['banner']['img'][0] }}) center center / cover;">
-    </section> -->
-    <img src="{{ $config['banner']['img'][0] }}" 
-     alt=" Banner trên website" 
-     title="Banner trên website" 
-     width="100%" 
-     loading="lazy">
+<style>
+/* Mặc định: ẩn section, hiện img */
+.banner-section-mobile {
+    display: none;
+}
+.banner-img-desktop {
+    display: block;
+}
+
+/* Trên màn hình nhỏ (điện thoại): chỉ hiện section, ẩn img */
+@media screen and (max-width: 768px) {
+    .banner-section-mobile {
+        display: block;
+    }
+    .banner-img-desktop {
+        display: none;
+    }
+}
+</style>
+@php
+    $bannerImg = !empty($config['banner']['img']) && is_array($config['banner']['img']) && !empty($config['banner']['img'][0])
+        ? $config['banner']['img'][0]
+        : null;
+@endphp
+
+@if($bannerImg)
+    <!-- Background section cho mobile -->
+    <section class="banner-section-mobile background_bg header-bg" 
+        data-img-src="{{ $bannerImg }}" 
+        style="background: url({{ $bannerImg }}) center center / cover;">
+    </section>
+
+    <!-- Thẻ img hiển thị cho màn hình lớn -->
+    <img class="banner-img-desktop" 
+        src="{{ $bannerImg }}" 
+        alt="Banner trên website" 
+        title="Banner trên website" 
+        width="100%" 
+        loading="lazy">
 @endif
+
+
 
 {{--<div class="header-banner">
     <div id="cwvn-slider">

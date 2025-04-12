@@ -10,12 +10,12 @@
     <div class="row">
       <div class="col-md-12">
         <div class="page_title text-center">
-          <h1 class="ldtl-page-title">{{ ($config['title']??($category->name ?? "Đây là một Page")) }}</h1>
+          <h1 class="ldtl-page-title">{{ ($config['title']??($category->name ?? "Page")) }}</h1>
           <ul class="breadcrumb justify-content-center" style="color:white">
             
             @if(isset($category))
             <li class="breadcrumb-item">
-              <a href="index.html">Trang chủ</a>
+              <a href="#">Trang chủ</a>
             </li>
             @foreach(explode('/', $category->slug) as $word)
             <li class="breadcrumb-item">
